@@ -52,6 +52,8 @@
 - mongoose : `yarn add mongoose`
 - arquivo `routes.js`
 - criar pastas : src : models, controllers, config
+- Insomnia : `New Request >> POST >> Json`
+- Multer : `yarn add multer` :::: fazer 
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
