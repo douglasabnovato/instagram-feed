@@ -51,6 +51,7 @@
 - Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
 - mongoose : `yarn add mongoose`
 - arquivo `routes.js`
+- criar pastas : src : models, controllers, config
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
