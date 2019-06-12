@@ -21,7 +21,6 @@
 
 ### Ambiente de desenvolvimento
 #### Vídeo #1 - 10/06/2019
-
 *** Ferramentas ***
 - node 
 - package manager 
@@ -31,7 +30,6 @@
 - `node -v`
 - `yarn -v`
 - vscode
-
 *** Extensões ***
 - tema dracula
 - rocketseat react native
