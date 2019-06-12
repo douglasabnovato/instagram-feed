@@ -21,6 +21,7 @@
 
 ### Ambiente de desenvolvimento
 #### Vídeo #1 - 10/06/2019
+
 **Ferramentas**
 - node 
 - package manager 
@@ -30,7 +31,7 @@
 - `node -v`
 - `yarn -v`
 - vscode 
-&nbsp;
+
 **Extensões**
 - tema dracula
 - rocketseat react native
@@ -40,6 +41,16 @@
 
 ### Criando a base da aplicação 
 #### Vídeo #2 - 11/06/2019
+- backend da aplicação utilizando nodejs
+- api rest: serviços que não possuem funcionalidades de view
+- nova pasta : backend >> `yarn init -y` : cria arquivo `package.json`
+- instalar dependência express : `yarn add express`
+- `node src/index.js` >> `http://localhost:3333/`
+- nodemon : `yarn add nodemon -D`
+- yarn dev : atualiza o servidor a cada mudança
+- Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
+- mongoose : `yarn add mongoose`
+
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
