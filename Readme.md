@@ -20,6 +20,7 @@
 > Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end e React Native no mobile.
 
 #### Aula #1
+
 *** Ferramentas ***
 - node 
 - package manager 
@@ -28,7 +29,8 @@
 - yarn
 - `node -v`
 - `yarn -v`
-- vscode<br/> 
+- vscode
+
 *** Extensões: ***
 - tema dracula
 - rocketseat react native
