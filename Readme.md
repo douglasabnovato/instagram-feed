@@ -14,7 +14,7 @@
 ![HTML/CSS/Javascript](/images/logo-html-css-js.jpeg)
 ![VSCode](/images/logo-VSCode.png)
 ![Yarn](/images/logo-yarn.png)
-![Nodejs](/images/nodejs.png)
+![Nodejs](/images/logo-nodejs.png)
 
 ### Projeto
 > Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end e React Native no mobile.
