@@ -29,7 +29,8 @@
 - yarn
 - `node -v`
 - `yarn -v`
-- vscode&nbsp;
+- vscode 
+&nbsp;
 **Extensões**
 - tema dracula
 - rocketseat react native
@@ -37,15 +38,20 @@
 - Material icon theme
 - fonte fira code
 
-### Criando a base da aplicação #### Vídeo #2 - 11/06/2019
+### Criando a base da aplicação 
+#### Vídeo #2 - 11/06/2019
 
-### Construindo a interface web #### Vídeo #3 - 12/06/2019 
+### Construindo a interface web 
+#### Vídeo #3 - 12/06/2019 
 
-### Desenvolvendo o app mobile #### Vídeo #4 - 13/06/2019
+### Desenvolvendo o app mobile 
+#### Vídeo #4 - 13/06/2019
 
-### Funcionalidades avançadas #### Vídeo #5 - 14/06/2019 
+### Funcionalidades avançadas 
+#### Vídeo #5 - 14/06/2019 
 
-### Tirando todas as dúvidas #### Vídeo #6 - 16/06/2019 
+### Tirando todas as dúvidas 
+#### Vídeo #6 - 16/06/2019 
 
 :. De `Semana Omnistack 7.0`.<br/> 
 Por Diego Fernandes : https://rocketseat.com.br
