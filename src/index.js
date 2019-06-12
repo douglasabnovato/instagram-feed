@@ -7,8 +7,6 @@ mongoose.connect('mongodb+srv://omnistack7:omnistack7@cluster0-oikjh.mongodb.net
     useNewUrlParser: true, 
 });
 
-app.get('/', (req, res) => {
-    return res.send('Hello Omnistack.');
-});
+app.use(require('./routes'));
 
 app.listen(3333);
