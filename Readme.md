@@ -28,7 +28,7 @@
 - yarn
 - `node -v`
 - `yarn -v`
-- vscode
+- vscode<br/> 
 *** Extensões: ***
 - tema dracula
 - rocketseat react native
