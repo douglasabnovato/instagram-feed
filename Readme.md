@@ -54,6 +54,8 @@
 - criar pastas : src : models, controllers, config
 - Insomnia : `New Request >> POST >> Json`
 - Multer : `yarn add multer`
+- path : caminho de arquivos
+- upload de imagens no diretório do projeto 
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
