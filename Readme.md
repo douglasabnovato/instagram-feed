@@ -57,6 +57,7 @@
 - path : caminho de arquivos
 - upload de imagens no diretório do projeto 
 - upload de imagem na base de dados
+- listando os posts na api rest
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
