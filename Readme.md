@@ -39,7 +39,7 @@
 - Material icon theme
 - fonte fira code
 
-### Criando a base da aplicação 
+### Criando a base da aplicação - BACKEND
 #### Vídeo #2 - 11/06/2019
 - backend da aplicação utilizando nodejs
 - api rest: serviços que não possuem funcionalidades de view
@@ -62,6 +62,8 @@
 - redimensionar imagens
 - instalar sharp
 - insomnia - post >> create >> http://localhost:3333/posts
+- deletar a imagem original : `fs.unlinkSync`
+
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 

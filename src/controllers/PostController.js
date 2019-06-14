@@ -18,7 +18,9 @@ module.exports = {
             .jpeg({ quality: 70 })
             .toFile(
                 path.resolve(req.file.destination, 'resized', image)
-            )    
+        ) 
+        
+        fs.unlinkSync(req.file.path);
         
         const post = await Post.create({
             author,
