@@ -58,6 +58,9 @@
 - upload de imagens no diretório do projeto 
 - upload de imagem na base de dados
 - listando os posts na api rest
+- dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
+- redimensionar imagens
+- instalar sharp
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
