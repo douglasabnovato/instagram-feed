@@ -66,7 +66,8 @@
 - path : endereço da imagem : `http://localhost:3333/files/OmniStack.png`
 - transformando png em jpg
 - `http://localhost:3333/files/OmniStack.jpg`
-- `yarn add cors` : permitir acessibilidade mesmo em domínios diferentes
+- cors : `yarn add cors` : permitir acessibilidade mesmo em domínios diferentes
+- real time : biblioteca **socket.io**  : `yarn add socket.io`
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
