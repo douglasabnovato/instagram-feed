@@ -33,6 +33,8 @@ module.exports = {
             image: fileName,
         });
 
+        req.io.emit('post', post);
+
         return res.json({ post });
 
     }
