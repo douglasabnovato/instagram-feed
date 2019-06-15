@@ -61,9 +61,11 @@
 - dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
 - redimensionar imagens
 - instalar sharp
-- insomnia - post >> create >> http://localhost:3333/posts
+- insomnia - post >> create >> `http://localhost:3333/posts`
 - deletar a imagem original : `fs.unlinkSync`
-
+- path : endereço da imagem : `http://localhost:3333/files/OmniStack.png`
+- transformando png em jpg
+- `http://localhost:3333/files/OmniStack.jpg`
 
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
