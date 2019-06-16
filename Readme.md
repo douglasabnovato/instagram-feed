@@ -70,10 +70,6 @@
 - real time : biblioteca **socket.io**  : `yarn add socket.io`
 - server = http e io demais : possibilitam acessar a aplicação de diferentes protocolos.
 
-> Resumindo
-1. 
-2. 
-
 ### Construindo a interface web 
 #### Vídeo #3 - 12/06/2019 
 
