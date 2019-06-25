@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 12 de junho de 2019 - 16:10
+## Atualização: 25 de junho de 2019 - 17:03
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
@@ -69,9 +69,11 @@
 - cors : `yarn add cors` : permitir acessibilidade mesmo em domínios diferentes
 - real time : biblioteca **socket.io**  : `yarn add socket.io`
 - server = http e io demais : possibilitam acessar a aplicação de diferentes protocolos.
+- revisado o projeto, funcionando corretamente. Partindo para a próxima etapa.
 
-### Construindo a interface web 
+### Construindo a interface web - FRONTEND
 #### Vídeo #3 - 12/06/2019 
+- `create-react-app frontend`
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
