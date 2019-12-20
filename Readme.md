@@ -55,6 +55,7 @@ Projeto será um **Clone do Feed do instagram**
 1. cluster com várias bases de dados
 - mongoose : `yarn add mongoose`
 - arquivo `routes.js`
+- Post.js, PostController.js
 - criar pastas : src : models, controllers, config
 - Insomnia : `New Request >> POST >> Json`
 - Multer : `yarn add multer`
