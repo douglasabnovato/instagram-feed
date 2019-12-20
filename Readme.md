@@ -43,14 +43,14 @@ Projeto será um **Clone do Feed do instagram**
 
 ### Criando a base da aplicação - BACKEND
 #### Vídeo #2 - 11/06/2019
-- NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
+- Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - backend da aplicação utilizando nodejs
 - api rest: serviços que não possuem funcionalidades de view
 - nova pasta : backend >> `yarn init -y` : cria arquivo `package.json`
 - instalar dependência express : `yarn add express`
 - `node src/index.js` >> `http://localhost:3333/`
 - nodemon : `yarn add nodemon -D`
-- yarn dev : atualiza o servidor a cada mudança
+- `yarn dev` : atualiza o servidor a cada mudança
 - Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
 1. cluster com várias bases de dados
 - mongoose : `yarn add mongoose`
