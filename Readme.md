@@ -30,11 +30,13 @@
 - Editor : VSCode, plugin 
 
 **Extensões**
-- tema dracula
-- rocketseat react native
-- rocketseat reactjs
-- Material icon theme
-- fonte fira code
+- tema `dracula`
+- `rocketseat react native`
+- `rocketseat reactjs`
+- `Material icon theme`
+- fonte `fira code`
+
+Projeto será um **Clone do Feed do instagram**
 
 ### Criando a base da aplicação - BACKEND
 #### Vídeo #2 - 11/06/2019
