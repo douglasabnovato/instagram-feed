@@ -51,6 +51,7 @@ Projeto será um **Clone do Feed do instagram**
 - nodemon : `yarn add nodemon -D`
 - yarn dev : atualiza o servidor a cada mudança
 - Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
+1. cluster com várias bases de dados
 - mongoose : `yarn add mongoose`
 - arquivo `routes.js`
 - criar pastas : src : models, controllers, config
