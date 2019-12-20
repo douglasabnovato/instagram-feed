@@ -43,6 +43,7 @@ Projeto será um **Clone do Feed do instagram**
 
 ### Criando a base da aplicação - BACKEND
 #### Vídeo #2 - 11/06/2019
+- NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - backend da aplicação utilizando nodejs
 - api rest: serviços que não possuem funcionalidades de view
 - nova pasta : backend >> `yarn init -y` : cria arquivo `package.json`
