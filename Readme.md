@@ -37,6 +37,9 @@
 - fonte `fira code`
 
 Projeto será um **Clone do Feed do instagram**
+- web
+- mobile
+- real time
 
 ### Criando a base da aplicação - BACKEND
 #### Vídeo #2 - 11/06/2019
