@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 25 de junho de 2019 - 17:03
+## Atualização: 20 de dezembro de 2019 - 12:01
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
@@ -23,7 +23,7 @@
 #### Vídeo #1 - 10/06/2019
 
 **Ferramentas**
-- node 
+- Node JS : `https://nodejs.org/en/` : versão LTS
 - package manager 
 - chocolatey
 - npm 
