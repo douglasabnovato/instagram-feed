@@ -24,13 +24,10 @@
 
 **Ferramentas**
 - Node JS : `https://nodejs.org/en/` : versão LTS
-- package manager 
-- chocolatey
-- npm 
-- yarn
-- `node -v`
-- `yarn -v`
-- vscode 
+- package manager : chocolatey é para o ambiente windows
+- Yarn : `https://yarnpkg.com/`
+- Node JS : `node -v`; npm : `npm -v`; yarn : `yarn -v`
+- Editor : VSCode, plugin 
 
 **Extensões**
 - tema dracula
