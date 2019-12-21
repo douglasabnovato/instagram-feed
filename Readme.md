@@ -18,6 +18,7 @@
 
 ### Projeto
 > Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end e React Native no mobile.
+>Projeto será um **Clone do Feed do instagram**, com módulo web e mobile, sendo real time.
 
 ### Ambiente de desenvolvimento
 #### Vídeo #1 - 10/06/2019
@@ -35,11 +36,6 @@
 - `rocketseat reactjs`
 - `Material icon theme`
 - fonte `fira code`
-
-Projeto será um **Clone do Feed do instagram**
-- web
-- mobile
-- real time
 
 ### Criando a base da aplicação - BACKEND
 #### Vídeo #2 - 11/06/2019
