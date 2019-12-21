@@ -62,7 +62,7 @@
 - upload de imagem na base de dados
 - listando os posts na api rest
 - dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
-- redimensionar imagens
+- redimensionar imagens: dimensões menores, qualidade menores.
 - instalar sharp: manipular imagens dentro da aplicação.
 - insomnia - post >> create >> `http://localhost:3333/posts`
 - deletar a imagem original : `fs.unlinkSync`
