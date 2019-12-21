@@ -63,7 +63,7 @@
 - listando os posts na api rest
 - dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
 - redimensionar imagens
-- instalar sharp
+- instalar sharp: manipular imagens dentro da aplicação.
 - insomnia - post >> create >> `http://localhost:3333/posts`
 - deletar a imagem original : `fs.unlinkSync`
 - path : endereço da imagem : `http://localhost:3333/files/OmniStack.png`
