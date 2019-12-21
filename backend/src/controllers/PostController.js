@@ -1,8 +1,9 @@
 const Post = require('../models/Post');
 
 module.exports = {
-    async index (req, res){
-
+    async index(req, res){
+        const posts = await Post.find().sort('-createAt');
+        return res.json(posts);
     },
 
     async store(req, res){
@@ -16,6 +17,6 @@ module.exports = {
             image,
         });
         
-        return res.json({ok : true});
+        return res.json(post);
     }
 };
