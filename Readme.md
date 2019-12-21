@@ -71,8 +71,17 @@
 - `http://localhost:3333/files/OmniStack.jpg`
 - cors : `yarn add cors` : permitir acessibilidade mesmo em domínios diferentes
 - real time : biblioteca **socket.io**  : `yarn add socket.io`
-- server = http e io demais : possibilitam acessar a aplicação de diferentes protocolos.
+- `socket.io` : server = http e io demais : possibilitam acessar a aplicação de diferentes protocolos, ou seja, que nosso backend seja visualizado pelo frontend.
+- Revisão:
+1. `index.js`:entrada da nossa aplicação- importação das dependências, conexão com banco de dados, divisão do servidor para http e socket.io, o cors permitindo acesso por todos protocolos, rotas para arquivos físicos e estáticos
+2. `routes.js`: rotas get e post, rotas para realizar likes
+3. controllers: LikeController e PostController fazendo nossa regra de negócios.
+4. Model Post: uma representação da tabela no banco de dados.
 - revisado o projeto, funcionando corretamente. Partindo para a próxima etapa.
+5. config `upload.js` : determinado o local para armazenar os arquvios de upload
+6. libs express mongo multer sharp 
+- finalizamos o BACKEND da aplicação.
+:. próximo passo é construir o FRONTEND para consumir essa api. 
 
 ### Construindo a interface web - FRONTEND
 #### Vídeo #3 - 12/06/2019 
