@@ -59,7 +59,9 @@ Projeto será um **Clone do Feed do instagram**
 - criar pastas : src : models, controllers, config
 - Insomnia : `New Request >> POST >> Json`
 - Multer : `yarn add multer`
-- path : caminho de arquivos
+1. `console.log(req.body);`
+2. `console.log(req.file);`
+- path : formata caminho de arquivos
 - upload de imagens no diretório do projeto 
 - upload de imagem na base de dados
 - listando os posts na api rest
