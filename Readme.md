@@ -85,7 +85,7 @@
 
 ### Construindo a interface web - FRONTEND
 #### Vídeo #3 - 12/06/2019 
-- `create-react-app frontend`
+- criando  projeto : `create-react-app frontend`
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
