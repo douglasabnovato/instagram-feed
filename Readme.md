@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 20 de dezembro de 2019 - 12:01
+## Atualização: 22 de dezembro de 2019 - 15:02
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
@@ -77,7 +77,6 @@
 2. `routes.js`: rotas get e post, rotas para realizar likes
 3. controllers: LikeController e PostController fazendo nossa regra de negócios.
 4. Model Post: uma representação da tabela no banco de dados.
-- revisado o projeto, funcionando corretamente. Partindo para a próxima etapa.
 5. config `upload.js` : determinado o local para armazenar os arquvios de upload
 6. libs express mongo multer sharp 
 - finalizamos o BACKEND da aplicação.
