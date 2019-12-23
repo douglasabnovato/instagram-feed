@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 22 de dezembro de 2019 - 15:02
+## Atualização: 23 de dezembro de 2019 - 10:22
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
@@ -95,5 +95,5 @@
 ### Tirando todas as dúvidas 
 #### Vídeo #6 - 16/06/2019 
 
-:. De `Semana Omnistack 7.0`.<br/> 
+:. De `Semana Omnistack 7.0 - Rocketseat`.<br/> 
 Por Diego Fernandes : https://rocketseat.com.br
