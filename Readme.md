@@ -84,7 +84,11 @@
 
 ### Construindo a interface web - FRONTEND
 #### Vídeo #3 - 12/06/2019 
-- criando  projeto : `create-react-app frontend`
+- na pasta do projeto backend da aplicação `yarn dev`
+- criando  projeto : 
+- `npx create-react-app my-app`
+- `cd my-app`
+- `npm start`
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
