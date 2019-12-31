@@ -88,6 +88,7 @@
 - `npx create-react-app frontend`
 - `cd frontend`
 - `yarn start`
+- Adicionar rotas: `yarn add react-router-dom` 
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
