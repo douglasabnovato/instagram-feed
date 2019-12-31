@@ -85,9 +85,9 @@
 #### Vídeo #3 - 12/06/2019 
 - na pasta do projeto backend da aplicação `yarn dev`
 - criando  projeto : 
-- `npx create-react-app my-app`
-- `cd my-app`
-- `npm start`
+- `npx create-react-app frontend`
+- `cd frontend`
+- `yarn start`
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
