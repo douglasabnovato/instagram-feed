@@ -1,9 +1,10 @@
 import React from 'react';
+import './global.css';
 
 function App() {
   return (
     <div className="App">
-      douglas novato
+      <h2>Hello World.</h2>
     </div>
   );
 }
