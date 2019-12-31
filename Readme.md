@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 23 de dezembro de 2019 - 10:22
+## Atualização: 31 de dezembro de 2019 - 16:36
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
