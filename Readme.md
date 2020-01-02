@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 02 de janeiro de 2019 - 14:32
+## Atualização: 02 de janeiro de 2019 - 19:17
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
@@ -91,6 +91,13 @@
 - frontend : `http://localhost:3000/`
 - Adicionar rotas: `yarn add react-router-dom` 
 - Biblioteca axios: `yarn add axios`, para tratar requisições
+- alguns destaques durante essa etapa do projeto:
+1. componentes em formato de função
+2. componentes em formato de classe
+3. navegação organizado em rotas no arquivo `routes.js`. Router verifica se a rota citada está no endereço e a exibe. Podendo assim, encontrar mais de uma rota. Para isso não acontecer, utiliza-se o Switch, para garantir que apenas um endereço será exibido por rota.
+4. Link é o componente react que funciona como o `<a>` do html, para fazer linkes
+5. axios : a biblioteca responsável por tratar requisição http
+6. erro no momento: a api que criamos não está retornando as imagens
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019

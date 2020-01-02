@@ -55,4 +55,5 @@ class Feed extends Component{
         );
     }
 }
+
 export default Feed;
