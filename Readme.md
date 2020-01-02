@@ -17,18 +17,17 @@
 ![Nodejs](/images/logo-nodejs.png)
 
 ### Projeto
-> Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end e React Native no mobile.
+> Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end web e React Native no front-end mobile.
 >Projeto será um **Clone do Feed do instagram**, com módulo web e mobile, sendo real time.
+
 ### Ambiente de desenvolvimento
 #### Vídeo #1 - 10/06/2019
-
 **Ferramentas**
 - Node JS : `https://nodejs.org/en/` : versão LTS
 - package manager : chocolatey é para o ambiente windows
 - Yarn : `https://yarnpkg.com/`
 - Node JS : `node -v`; npm : `npm -v`; yarn : `yarn -v`
 - Editor : VSCode, plugin 
-
 **Extensões**
 - tema `dracula`
 - `rocketseat react native`
