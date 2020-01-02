@@ -83,10 +83,12 @@
 ### Construindo a interface web - FRONTEND
 #### Vídeo #3 - 12/06/2019 
 - na pasta do projeto backend da aplicação `yarn dev`
+- backend : `http://localhost:3333/`
 - criando  projeto : 
 - `npx create-react-app frontend`
 - `cd frontend`
 - `yarn start`
+- frontend : `http://localhost:3000/`
 - Adicionar rotas: `yarn add react-router-dom` 
 
 ### Desenvolvendo o app mobile 
