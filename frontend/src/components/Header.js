@@ -1,17 +1,17 @@
 import React from 'react';
 
-import Header from './Header.css'
+import './Header.css';
+
+import logo from '../assets/logo.svg';
+import camera from '../assets/camera.svg';
 
 export default function Header(){
-    render(){
-        return(
-            <header id="main-header">
-                <div className="header-content">
-                    <img src="" alt="InstaRocket" />
-                    <img src="" alt="Enviar publicação" />
-                </div>
-            </header>
-            
-        );
-    }
+    return(
+        <header id="main-header">
+            <div className="header-content">
+                <img src={ logo } alt="InstaRocket" />
+                <img src={ camera } alt="Enviar publicação" />
+            </div>
+        </header>
+    );
 }
