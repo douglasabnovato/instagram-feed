@@ -90,6 +90,7 @@
 - `yarn start`
 - frontend : `http://localhost:3000/`
 - Adicionar rotas: `yarn add react-router-dom` 
+- Biblioteca axios: `yarn add axios`, para tratar requisições
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
