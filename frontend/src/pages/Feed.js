@@ -26,7 +26,7 @@ class Feed extends Component{
         return(
             <section id="post-list">
                 {this.state.feed.map(post => (
-                    <article>
+                    <article key={post._id}>
                         <header>
                             <div className="user-info">
                                 <span>{post.author}</span>
