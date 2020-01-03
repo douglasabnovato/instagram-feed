@@ -97,7 +97,7 @@
 3. navegação organizado em rotas no arquivo `routes.js`. Router verifica se a rota citada está no endereço e a exibe. Podendo assim, encontrar mais de uma rota. Para isso não acontecer, utiliza-se o Switch, para garantir que apenas um endereço será exibido por rota.
 4. Link é o componente react que funciona como o `<a>` do html, para fazer linkes
 5. axios : a biblioteca responsável por tratar requisição http
-6. erro no momento: a api que criamos não está retornando as imagens
+**ERRO**: a api que criamos não está retornando as imagens
 - tratando o formulário de um novo posto em `New.js`
 - like
 - real time : socket.io : `yarn add socket.io-client`
