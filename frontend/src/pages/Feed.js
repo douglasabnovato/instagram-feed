@@ -32,7 +32,7 @@ class Feed extends Component{
         socket.on('like', likedPost => {
             this.setState({
                 feed: this.state.feed.map(post => 
-                    post.id === likedPost.id ? likedPost : post
+                    post._id === likedPost._id ? likedPost : post
                 )
             });                
         })

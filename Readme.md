@@ -99,6 +99,8 @@
 5. axios : a biblioteca responsável por tratar requisição http
 6. erro no momento: a api que criamos não está retornando as imagens
 - tratando o formulário de um novo posto em `New.js`
+- like
+- real time : socket.io : `yarn add socket.io-client`
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
