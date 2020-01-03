@@ -6,8 +6,6 @@ import more from '../assets/more.svg';
 import like from '../assets/like.svg';
 import comment from '../assets/comment.svg';
 import send from '../assets/send.svg';
-import image1 from '../assets/image-rocketseat.png'
-import image2 from '../assets/image-semana-omnistack-7.jpg'
 
 class Feed extends Component{
 
