@@ -98,6 +98,7 @@
 4. Link é o componente react que funciona como o `<a>` do html, para fazer linkes
 5. axios : a biblioteca responsável por tratar requisição http
 6. erro no momento: a api que criamos não está retornando as imagens
+- tratando o formulário de um novo posto em `New.js`
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
