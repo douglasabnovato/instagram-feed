@@ -40,9 +40,11 @@
 - Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - backend da aplicação utilizando nodejs
 - api rest: serviços que não possuem funcionalidades de view
-- nova pasta : backend >> `yarn init -y` : cria arquivo `package.json`
+- nova pasta : backend >> `yarn init -y` : cria arquivo `package.json` 
+- `package.json` : guardo os registros das dependências do nosso projeto
 - instalar dependência express : `yarn add express`
-- `node src/index.js` >> `http://localhost:3333/`
+- `yarn.lock`: arquivo de logs
+- `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
 - nodemon : `yarn add nodemon -D`
 - `yarn dev` : atualiza o servidor a cada mudança
 - Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
