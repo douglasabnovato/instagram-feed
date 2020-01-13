@@ -1,6 +1,6 @@
 # Semana Omnistack 7.0
 
-## Atualização: 11 de janeiro de 2019 - 13:15
+## Atualização: 13 de janeiro de 2019 - 14:52
 ## Criação: 12 de junho de 2019
 ## Prática : @douglasabnovato
 
@@ -13,6 +13,7 @@
 ![Github](/images/logo-github.png)
 ![HTML/CSS/Javascript](/images/logo-html-css-js.jpeg)
 ![VSCode](/images/logo-VSCode.png)
+![NPM](/images/logo-npm.png)
 ![Yarn](/images/logo-yarn.png)
 ![Nodejs](/images/logo-nodejs.png)
 
