@@ -114,6 +114,8 @@ Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme 
 - SDK do android
 - genymotion + virtualbox
 - criar o projeto mobile : `react-native init instarocket`
+- rodar a aplicação com o emulador aberto : `react-native run-android`
+- nas próximas vezes : `react-native start`
 
 ### Funcionalidades avançadas 
 #### Vídeo #5 - 14/06/2019 
