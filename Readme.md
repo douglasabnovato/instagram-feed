@@ -107,6 +107,10 @@
 
 ### Desenvolvendo o app mobile 
 #### Vídeo #4 - 13/06/2019
+Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
+- Chocolatey
+- Node, Python2 e a JDK8
+- CLI (Command Line Interface) do React Native
 
 ### Funcionalidades avançadas 
 #### Vídeo #5 - 14/06/2019 
