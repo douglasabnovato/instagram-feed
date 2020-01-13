@@ -111,6 +111,9 @@ Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme 
 - Chocolatey
 - Node, Python2 e a JDK8
 - CLI (Command Line Interface) do React Native
+- SDK do android
+- genymotion + virtualbox
+- criar o projeto mobile : `react-native init instarocket`
 
 ### Funcionalidades avançadas 
 #### Vídeo #5 - 14/06/2019 
