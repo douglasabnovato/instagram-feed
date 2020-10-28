@@ -1,10 +1,11 @@
-# Semana Omnistack 7.0
+### Instagram Feed 
 
-## Atualização: 13 de janeiro de 2019 - 14:52
-## Criação: 12 de junho de 2019
-## Prática : @douglasabnovato
+#### Aplicação 
 
-## Ferramentas : 
+- Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end web e React Native no front-end mobile.
+- Projeto será um **Clone do Feed do instagram**, com módulo web e mobile, sendo real time. 
+
+#### Ferramentas : 
 
 ![Rocketseat](/images/logo-rocketseat.png)
 ![ReactJS](/images/logo-reactjs.jpg)
@@ -15,29 +16,23 @@
 ![VSCode](/images/logo-VSCode.png)
 ![NPM](/images/logo-npm.png)
 ![Yarn](/images/logo-yarn.png)
-![Nodejs](/images/logo-nodejs.png)
-
-### Projeto
-> Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end web e React Native no front-end mobile.
->Projeto será um **Clone do Feed do instagram**, com módulo web e mobile, sendo real time.
+![Nodejs](/images/logo-nodejs.png) 
 
 ### Ambiente de desenvolvimento
-#### Vídeo #1 - 10/06/2019
-**Ferramentas**
+
 - Node JS : `https://nodejs.org/en/` : versão LTS
 - package manager : chocolatey é para o ambiente windows
 - Yarn : `https://yarnpkg.com/`
 - Node JS : `node -v`; npm : `npm -v`; yarn : `yarn -v`
 - Editor : VSCode, plugin 
-**Extensões**
-- tema `dracula`
+- Extensão - tema `dracula`
 - `rocketseat react native`
 - `rocketseat reactjs`
 - `Material icon theme`
 - fonte `fira code`
 
-### Criando a base da aplicação - BACKEND
-#### Vídeo #2 - 11/06/2019
+### Criando a base da aplicação - BACKEND 
+
 - Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - backend da aplicação utilizando nodejs
 - api rest: serviços que não possuem funcionalidades de view
@@ -84,7 +79,7 @@
 :. próximo passo é construir o FRONTEND para consumir essa api. 
 
 ### Construindo a interface web - FRONTEND
-#### Vídeo #3 - 12/06/2019 
+
 - na pasta do projeto backend da aplicação `yarn dev`
 - backend : `http://localhost:3333/`
 - criando  projeto : 
@@ -106,8 +101,8 @@
 - real time : socket.io : `yarn add socket.io-client`
 
 ### Desenvolvendo o app mobile 
-#### Vídeo #4 - 13/06/2019
-Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
+
+- Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
 - Chocolatey
 - Node, Python2 e a JDK8
 - CLI (Command Line Interface) do React Native
@@ -117,11 +112,8 @@ Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme 
 - rodar a aplicação com o emulador aberto : `react-native run-android`
 - nas próximas vezes : `react-native start`
 
-### Funcionalidades avançadas 
-#### Vídeo #5 - 14/06/2019 
+### Funcionalidades avançadas  
 
-### Tirando todas as dúvidas 
-#### Vídeo #6 - 16/06/2019 
+### Tirando todas as dúvidas   
 
-:. De `Semana Omnistack 7.0 - Rocketseat`.<br/> 
-Por Diego Fernandes : https://rocketseat.com.br
+De [Diego Fernandes](https://rocketseat.com.br)
