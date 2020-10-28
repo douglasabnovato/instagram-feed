@@ -18,7 +18,7 @@
 ![Yarn](/images/logo-yarn.png)
 ![Nodejs](/images/logo-nodejs.png) 
 
-### Ambiente de desenvolvimento
+#### Ambiente de desenvolvimento
 
 - Node JS : `https://nodejs.org/en/` : versão LTS
 - package manager : chocolatey é para o ambiente windows
@@ -31,7 +31,7 @@
 - `Material icon theme`
 - fonte `fira code`
 
-### Criando a base da aplicação - BACKEND 
+#### Criando a base da aplicação - BACKEND 
 
 - Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - backend da aplicação utilizando nodejs
@@ -78,7 +78,7 @@
 - finalizamos o BACKEND da aplicação.
 :. próximo passo é construir o FRONTEND para consumir essa api. 
 
-### Construindo a interface web - FRONTEND
+#### Construindo a interface web - FRONTEND
 
 - na pasta do projeto backend da aplicação `yarn dev`
 - backend : `http://localhost:3333/`
@@ -100,7 +100,7 @@
 - like
 - real time : socket.io : `yarn add socket.io-client`
 
-### Desenvolvendo o app mobile 
+#### Desenvolvendo o app mobile 
 
 - Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
 - Chocolatey
@@ -112,8 +112,8 @@
 - rodar a aplicação com o emulador aberto : `react-native run-android`
 - nas próximas vezes : `react-native start`
 
-### Funcionalidades avançadas  
+#### Funcionalidades avançadas  
 
-### Tirando todas as dúvidas   
+#### Tirando todas as dúvidas   
 
 De [Diego Fernandes](https://rocketseat.com.br)
