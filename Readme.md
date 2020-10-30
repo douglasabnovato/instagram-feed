@@ -2,22 +2,6 @@
 
 #### Aplicação 
 
-- Construir uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end web e React Native no front-end mobile.
-- Projeto será um **Clone do Feed do instagram**, com módulo web e mobile, sendo real time. 
-
-#### Ferramentas : 
-
-![Rocketseat](/images/logo-rocketseat.png)
-![ReactJS](/images/logo-reactjs.jpg)
-![React Native](/images/logo-react-native.png)
-![Git](/images/logo-git.png)
-![Github](/images/logo-github.png)
-![HTML/CSS/Javascript](/images/logo-html-css-js.jpeg)
-![VSCode](/images/logo-VSCode.png)
-![NPM](/images/logo-npm.png)
-![Yarn](/images/logo-yarn.png)
-![Nodejs](/images/logo-nodejs.png) 
-
 #### Ambiente de desenvolvimento
 
 - Node JS : `https://nodejs.org/en/` : versão LTS
