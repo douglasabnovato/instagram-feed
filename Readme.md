@@ -4,16 +4,18 @@
 
 #### Ambiente de desenvolvimento
 
-- Node JS : `https://nodejs.org/en/` : versão LTS
-- package manager : chocolatey é para o ambiente windows
-- Yarn : `https://yarnpkg.com/`
-- Node JS : `node -v`; npm : `npm -v`; yarn : `yarn -v`
-- Editor : VSCode, plugin 
-- Extensão - tema `dracula`
-- `rocketseat react native`
-- `rocketseat reactjs`
-- `Material icon theme`
-- fonte `fira code`
+- [x] 1.1. Node JS : `https://nodejs.org/en/` : versão LTS
+- [x] 1.1.1. Node JS : `node -v`;
+- [x] 1.2. package manager - Chocolatey é para o ambiente windows
+- [x] 1.2.1. npm : `npm -v`;
+- [x] 1.3. Yarn : `https://yarnpkg.com/`
+- [x] 1.3.1. yarn : `yarn -v`
+- [x] 1.4. Editor : VSCode, plugin 
+- [x] 1.5. Extensão - tema `dracula`
+- [x] 1.5.1. `rocketseat react native`
+- [x] 1.5.2. `rocketseat reactjs`
+- [x] 1.5.3. `Material icon theme`
+- [x] 1.5.4. fonte `fira code`
 
 #### Criando a base da aplicação - BACKEND 
 
