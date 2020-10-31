@@ -16,29 +16,29 @@
 - [x] 1.5.3. `rocketseat reactjs`
 - [x] 1.5.4. `Material icon theme`
 - [x] 1.5.5. fonte `fira code`
+- [x] 1.6. Sketch cloud - desenhar a aplicação : Instagram Feed
 
 #### Criando a base da aplicação - BACKEND 
 
-- Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
-- backend da aplicação utilizando nodejs
-- api rest: serviços que não possuem funcionalidades de view
-- nova pasta : backend >> `yarn init -y` : cria arquivo `package.json` 
+- [x] 2.1. Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
+- [x] 2.2. backend da aplicação utilizando nodejs
+- [x] 2.3. api rest: serviços que não possuem funcionalidades de view
+- [x] 2.4. nova pasta : backend >> `yarn init -y` : cria arquivo `package.json` 
 - `package.json` : guardo os registros das dependências do nosso projeto
-- instalar dependência express : `yarn add express`
-- `yarn.lock`: arquivo de logs
-- `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
-- nodemon : `yarn add nodemon -D`
-- `yarn dev` : atualiza o servidor a cada mudança
-- Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
-1. cluster com várias bases de dados
-- mongoose : `yarn add mongoose`
-- arquivo `routes.js`
-- Post.js, PostController.js
-- criar pastas : src : models, controllers, config
-- Insomnia : `New Request >> POST >> Json`
-- Multer : `yarn add multer`
-1. `console.log(req.body);`
-2. `console.log(req.file);`
+- [x] 2.5. instalar dependência Express : `yarn add express`
+- [x] 2.5.1. `yarn.lock`: arquivo de logs
+- [x] 2.5.2. `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
+- [x] 2.5.3. nodemon : `yarn add nodemon -D` - `yarn dev` : atualiza o servidor a cada mudança
+- [x] 2.6.1. Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
+- [x] 2.6.2. cluster com várias bases de dados
+- [x] 2.7. mongoose : `yarn add mongoose`
+- [x] 2.8. arquivo `routes.js`
+- [x] 2.9. Post.js, PostController.js
+- [x] 2.9.1. criar pastas : src : models, controllers, config
+- [x] 2.10. Insomnia : `New Request >> POST >> Json`
+- [x] 2.11. Multer : `yarn add multer`
+- [x] 2.11.1. `console.log(req.body);`
+- [x] 2.11.2. `console.log(req.file);`
 - path : formata caminho de arquivos
 - upload de imagens no diretório do projeto 
 - upload de imagem na base de dados
