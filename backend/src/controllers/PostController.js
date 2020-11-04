@@ -12,13 +12,12 @@ module.exports = {
     async store(req, res){
 
         console.log(req.body);
-
         const { author, place, description, hashtags } = req.body;
         const { filename: image } = req.file;
 
         const [name] = image.split('.');
-        const fileName = `${name}.jpg`
-
+        const fileName = `${name}.jpg`;
+        
         await sharp(req.file.path)
             .resize(500)
             .jpeg({ quality: 70 })

@@ -40,7 +40,7 @@
 - [x] 1.5.5. fonte `fira code`
 - [x] 1.6. Sketch cloud - desenhar a aplicação : Instagram Feed
 
-#### Criando a base da aplicação - BACKEND 
+#### Criando a base de dados da aplicação - BACKEND 
 
 - [x] 2.1. Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - [x] 2.2. backend da aplicação utilizando nodejs
