@@ -51,7 +51,8 @@
 - [x] 2.5.2. `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
 - [x] 2.5.3. Nodemon : `yarn add nodemon -D` - script dev no package.json - `yarn dev` : atualiza o servidor a cada mudança
 - [x] 2.6.1. Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
-- [x] 2.6.2. criar um cluster para depois criar nossa base de dados dentro dele
+- [x] 2.6.2. criar um cluster para depois criar nossa base de dados
+- [x] 2.6.3. banco de dados não relacional
 - [x] 2.7. mongoose : `yarn add mongoose`
 - [x] 2.8. arquivo `routes.js`
 - [x] 2.9. Post.js, PostController.js
