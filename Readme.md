@@ -1,6 +1,28 @@
-### Instagram Feed 
+<h3 align="center">
+  Instagram Feed 🚀
+</h3>
 
-#### Aplicação 
+---
+<br>
+
+![Resultado da Aplicação](/images/a-aplicacao-terminada.jpg)
+
+### O que é a aplicação
+
+- A aplicação é o feed do Instagram com um frontend web, um frontend mobile e um backend.
+
+#### Tecnologias/ Ferramentas/ Bibliotecas
+
+- HTML / Javascript / CSS
+- ReactJS / NodeJS / React Native
+
+#### Código + Dependências
+
+- git clone "http": ter o projeto na máquina local
+- npm install 
+- Rodar a aplicação: `npm start`
+
+#### Passo a passo do projeto
 
 #### Ambiente de desenvolvimento
 
@@ -23,14 +45,13 @@
 - [x] 2.1. Empresas que estão utilizando essa tecnologia React, React Native, Nodejs: NetFlix, Trello, PayPal, Linkedin, Uber, NASA, Medium
 - [x] 2.2. backend da aplicação utilizando nodejs
 - [x] 2.3. api rest: serviços que não possuem funcionalidades de view
-- [x] 2.4. nova pasta : backend >> `yarn init -y` : cria arquivo `package.json` 
-- `package.json` : guardo os registros das dependências do nosso projeto
+- [x] 2.4. nova pasta : backend - `yarn init -y` : cria arquivo `package.json` : guarda os registros das dependências do nosso projeto
 - [x] 2.5. instalar dependência Express : `yarn add express`
 - [x] 2.5.1. `yarn.lock`: arquivo de logs
 - [x] 2.5.2. `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
-- [x] 2.5.3. nodemon : `yarn add nodemon -D` - `yarn dev` : atualiza o servidor a cada mudança
+- [x] 2.5.3. Nodemon : `yarn add nodemon -D` - `yarn dev` : atualiza o servidor a cada mudança
 - [x] 2.6.1. Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
-- [x] 2.6.2. cluster com várias bases de dados
+- [x] 2.6.2. criar um cluster para depois criar nossa base de dados dentro dele
 - [x] 2.7. mongoose : `yarn add mongoose`
 - [x] 2.8. arquivo `routes.js`
 - [x] 2.9. Post.js, PostController.js
@@ -102,4 +123,15 @@
 
 #### Tirando todas as dúvidas   
 
-De [Diego Fernandes](https://rocketseat.com.br)
+#### Próximo passo na aplicação
+
+- Link para o artigo da aplicação 
+
+#### Anotações   
+
+- Fonte do projeto: [Rocketseat - Omnistack 7.0 - Diego Fernandes](https://rocketseat.com.br)
+
+---
+<br>
+
+.: Por [Douglas A B Novato](https://linktr.ee/douglasabnovato)
