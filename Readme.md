@@ -93,7 +93,7 @@
 
 #### Construindo a interface web - FRONTEND
 
-- na pasta do projeto backend da aplicação `yarn dev`
+- [x] 3.1. na pasta do projeto backend da aplicação `yarn dev`
 - backend : `http://localhost:3333/`
 - criando  projeto : 
 - `npx create-react-app frontend`
