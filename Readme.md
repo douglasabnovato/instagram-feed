@@ -69,8 +69,8 @@
 - [x] 2.11.2. PostController.js
 - [x] 2.12. Insomnia : Instalar e criar uma workspace
 - [x] 2.13. Multer : `yarn add multer`
-- [x] 2.13.1. path : formata caminho de arquivos
-- [x] 2.13.2. upload de imagens no diretório do projeto 
+- [x] 2.13.1. path : biblioteca que formata caminho de arquivos
+- [x] 2.13.2. upload de imagens no diretório do projeto - multer.diskStorage
 - [x] 2.13.3. upload de imagem na base de dados
 - [x] 2.13.4. listando os posts na api rest
 - [x] 2.13.5. dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
