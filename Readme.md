@@ -48,11 +48,13 @@
 - [x] 2.4. nova pasta : backend - `yarn init -y` : cria arquivo `package.json` : guarda os registros das dependências do nosso projeto
 - [x] 2.5. instalar dependência Express : `yarn add express`
 - [x] 2.5.1. `yarn.lock`: arquivo de logs
-- [x] 2.5.2. `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
-- [x] 2.5.3. Nodemon : `yarn add nodemon -D` - script dev no package.json - `yarn dev` : atualiza o servidor a cada mudança
-- [x] 2.6.1. Mongo DB Atlas : mongo online : `https://www.mongodb.com/cloud/atlas`
-- [x] 2.6.2. criar um cluster para depois criar nossa base de dados
-- [x] 2.6.3. banco de dados não relacional
+- [x] 2.5.2. scripts : dev : `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
+- [x] 2.5.3. Nodemon : `yarn add nodemon -D` - script dev no package.json - `yarn dev` : atualiza o servidor a cada mudança - `scripts : dev : nodemon src/index.js`
+- [x] 2.5.4. rodar a aplicação: `yarn dev`
+- [x] 2.6.1. MongoDB Atlas - bd não relacional online: `https://www.mongodb.com/cloud/atlas`
+- [x] 2.6.2. criar um cluster >> connect >> Your Application >> copy na string de acesso
+- [x] 2.6.3. criar db access >> alterar informações na string de acesso
+- [x] 2.6.4. criar network access >> add ip address
 - [x] 2.7. mongoose : `yarn add mongoose`
 - [x] 2.8. arquivo `routes.js`
 - [x] 2.9. Post.js, PostController.js
@@ -67,7 +69,7 @@
 - listando os posts na api rest
 - dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
 - redimensionar imagens: dimensões menores, qualidade menores.
-- instalar sharp: manipular imagens dentro da aplicação.
+- instalar sharp: manipular imagens dentro da aplicação - `yarn add sharp`
 - insomnia - post >> create >> `http://localhost:3333/posts`
 - deletar a imagem original : `fs.unlinkSync`
 - path : endereço da imagem : `http://localhost:3333/files/OmniStack.png`

@@ -8,7 +8,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-mongoose.connect('mongodb+srv://omnistack7:omnistack7@cluster0-fygh8.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://dbFeedInstagram:douglas1234@cluster0.yg58x.mongodb.net/<dbname>?retryWrites=true&w=majority',{
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useFindAndModify: true
