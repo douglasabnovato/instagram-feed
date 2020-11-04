@@ -10,6 +10,9 @@ module.exports = {
     },
 
     async store(req, res){
+
+        console.log(req.body);
+
         const { author, place, description, hashtags } = req.body;
         const { filename: image } = req.file;
 

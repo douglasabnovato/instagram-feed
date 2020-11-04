@@ -56,37 +56,40 @@
 - [x] 2.6.3. criar db access >> alterar informações na string de acesso
 - [x] 2.6.4. criar network access >> add ip address
 - [x] 2.7. mongoose : `yarn add mongoose`
-- [x] 2.8. arquivo `routes.js`
-- [x] 2.9. Post.js, PostController.js
-- [x] 2.9.1. criar pastas : src : models, controllers, config
-- [x] 2.10. Insomnia : `New Request >> POST >> Json`
-- [x] 2.11. Multer : `yarn add multer`
-- [x] 2.11.1. `console.log(req.body);`
-- [x] 2.11.2. `console.log(req.file);`
-- path : formata caminho de arquivos
-- upload de imagens no diretório do projeto 
-- upload de imagem na base de dados
-- listando os posts na api rest
-- dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
-- redimensionar imagens: dimensões menores, qualidade menores.
-- instalar sharp: manipular imagens dentro da aplicação - `yarn add sharp`
-- insomnia - post >> create >> `http://localhost:3333/posts`
-- deletar a imagem original : `fs.unlinkSync`
-- path : endereço da imagem : `http://localhost:3333/files/OmniStack.png`
-- transformando png em jpg
-- `http://localhost:3333/files/OmniStack.jpg`
-- cors : `yarn add cors` : permitir acessibilidade mesmo em domínios diferentes
-- real time : biblioteca **socket.io**  : `yarn add socket.io`
-- `socket.io` : server = http e io demais : possibilitam acessar a aplicação de diferentes protocolos, ou seja, que nosso backend seja visualizado pelo frontend.
-- Revisão:
-1. `index.js`:entrada da nossa aplicação- importação das dependências, conexão com banco de dados, divisão do servidor para http e socket.io, o cors permitindo acesso por todos protocolos, rotas para arquivos físicos e estáticos
-2. `routes.js`: rotas get e post, rotas para realizar likes
-3. controllers: LikeController e PostController fazendo nossa regra de negócios.
-4. Model Post: uma representação da tabela no banco de dados.
-5. config `upload.js` : determinado o local para armazenar os arquvios de upload
-6. libs express mongo multer sharp 
-- finalizamos o BACKEND da aplicação.
-:. próximo passo é construir o FRONTEND para consumir essa api. 
+- [x] 2.7.1. mongoose.connect no index.js
+- [x] 2.8. Api Rest
+- [x] 2.8.1. arquivo `routes.js`
+- [x] 2.8.2. criar pastas : src : models, controllers, config
+- [x] 2.9. Models
+- [x] 2.9.1. Post.js
+- [x] 2.10. Config
+- [x] 2.10.1. upload.js
+- [x] 2.11. Controllers 
+- [x] 2.11.1. LikeController.js
+- [x] 2.11.2. PostController.js
+- [x] 2.12. Insomnia : Instalar e criar uma workspace
+- [x] 2.13. Multer : `yarn add multer`
+- [x] 2.13.1. path : formata caminho de arquivos
+- [x] 2.13.2. upload de imagens no diretório do projeto 
+- [x] 2.13.3. upload de imagem na base de dados
+- [x] 2.13.4. listando os posts na api rest
+- [x] 2.13.5. dar like : `http://localhost:3333/posts/5d03fa4f261c3d2928c817bb/like`
+- [x] 2.13.6. redimensionar imagens: dimensões menores, qualidade menores.
+- [x] 2.13.7. instalar sharp: manipular imagens dentro da aplicação - `yarn add sharp`
+- [x] 2.13.8. insomnia - post >> create >> `http://localhost:3333/posts`
+- [x] 2.13.9. deletar a imagem original : `fs.unlinkSync`
+- [x] 2.13.10. path : endereço da imagem : `http://localhost:3333/files/OmniStack.png`
+- [x] 2.13.11. transformando png em jpg - `http://localhost:3333/files/OmniStack.jpg`
+- [x] 2.14. cors : `yarn add cors` : permitir acessibilidade mesmo em domínios diferentes
+- [x] 2.15. real time : biblioteca **socket.io**  : `yarn add socket.io`
+- [x] 2.15.1. `socket.io` : server = http e io demais : possibilitam acessar a aplicação de diferentes protocolos, ou seja, que nosso backend seja visualizado pelo frontend.
+- [x] 2.16. Revisão:
+- [x] 2.16.1. `index.js`:entrada da nossa aplicação- importação das dependências, conexão com banco de dados, divisão do servidor para http e socket.io, o cors permitindo acesso por todos protocolos, rotas para arquivos físicos e estáticos
+- [x] 2.16.2. `routes.js`: rotas get e post, rotas para realizar likes
+- [x] 2.16.3. controllers: LikeController e PostController fazendo nossa regra de negócios.
+- [x] 2.16.4. Model Post: uma representação da tabela no banco de dados.
+- [x] 2.16.5. config `upload.js` : determinado o local para armazenar os arquvios de upload
+- [x] 2.16.6. libs express mongo multer sharp 
 
 #### Construindo a interface web - FRONTEND
 
