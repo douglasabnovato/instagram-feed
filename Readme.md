@@ -93,19 +93,15 @@
 
 #### Construindo a interface web - FRONTEND
 
-- [x] 3.1. na pasta do projeto backend da aplicação `yarn dev`
-- backend : `http://localhost:3333/`
-- criando  projeto : 
-- `npx create-react-app frontend`
-- `cd frontend`
-- `yarn start`
-- frontend : `http://localhost:3000/`
-- Adicionar rotas: `yarn add react-router-dom` 
-- Biblioteca axios: `yarn add axios`, para tratar requisições
-- alguns destaques durante essa etapa do projeto:
-1. componentes em formato de função
-2. componentes em formato de classe
-3. navegação organizado em rotas no arquivo `routes.js`. Router verifica se a rota citada está no endereço e a exibe. Podendo assim, encontrar mais de uma rota. Para isso não acontecer, utiliza-se o Switch, para garantir que apenas um endereço será exibido por rota.
+- [x] 3.1. rodar a aplicação backend: `yarn dev` em `http://localhost:3333/`
+- [x] 3.1.1. criando a aplicação em reactjs: `npx create-react-app frontend`
+- [x] 3.1.2. rodar a aplicação frontend: `yarn start` em `http://localhost:3000/`
+- [x] 3.2. Adicionar rotas: `yarn add react-router-dom` 
+- [x] 3.3. Biblioteca axios: `yarn add axios`, para tratar requisições
+- [x] 3.4. Pontos importantes desse projeto
+- [x] 3.4.1. componentes em formato de função
+- [x] 3.4.2. componentes em formato de classe
+- [x] 3.4.3. navegação organizado em rotas no arquivo `routes.js`. Router verifica se a rota citada está no endereço e a exibe. Podendo assim, encontrar mais de uma rota. Para isso não acontecer, utiliza-se o Switch, para garantir que apenas um endereço será exibido por rota.
 4. Link é o componente react que funciona como o `<a>` do html, para fazer linkes
 5. axios : a biblioteca responsável por tratar requisição http<br/>
 **ERRO**: a api que criamos não está retornando as imagens
