@@ -96,18 +96,16 @@
 - [x] 3.1. rodar a aplicação backend: `yarn dev` em `http://localhost:3333/`
 - [x] 3.1.1. criando a aplicação em reactjs: `npx create-react-app frontend`
 - [x] 3.1.2. rodar a aplicação frontend: `yarn start` em `http://localhost:3000/`
-- [x] 3.2. Adicionar rotas: `yarn add react-router-dom` 
+- [x] 3.2. Adicionar rotas com Router: `yarn add react-router-dom` 
 - [x] 3.3. Biblioteca axios: `yarn add axios`, para tratar requisições
 - [x] 3.4. Pontos importantes desse projeto
 - [x] 3.4.1. componentes em formato de função
 - [x] 3.4.2. componentes em formato de classe
-- [x] 3.4.3. navegação organizado em rotas no arquivo `routes.js`. Router verifica se a rota citada está no endereço e a exibe. Podendo assim, encontrar mais de uma rota. Para isso não acontecer, utiliza-se o Switch, para garantir que apenas um endereço será exibido por rota.
-4. Link é o componente react que funciona como o `<a>` do html, para fazer linkes
-5. axios : a biblioteca responsável por tratar requisição http<br/>
-**ERRO**: a api que criamos não está retornando as imagens
-- tratando o formulário de um novo posto em `New.js`
-- like
-- real time : socket.io : `yarn add socket.io-client`
+- [x] 3.5. Link é o componente react que funciona como o `<a>` do html mais poderoso
+- [x] 3.6. warning: a api que criamos não está retornando as imagens
+- [x] 3.7. tratando o formulário de um novo posto em `New.js`
+- [x] 3.8. like
+- [x] 3.9. real time : socket.io : `yarn add socket.io-client`
 
 #### Desenvolvendo o app mobile 
 
