@@ -15,11 +15,9 @@ class Feed extends Component{
     };
 
     async componentDidMount(){
-
         this.registerToSocket();
         const response = await api.get('posts');
         this.setState({ feed: response.data });
-
     }
 
     registerToSocket = () => {
@@ -55,7 +53,7 @@ class Feed extends Component{
                             <img src={ more } alt="Mais" />
                         </header>
 
-                        <img src={`http://localhost:3333/files/${post.image}`} alt="Rocketseat" />
+                        <img src={`http://localhost:3333/files/${post.image}`} alt="A imagem do Post" />
                         
                         <footer>
                             <div className="actions">

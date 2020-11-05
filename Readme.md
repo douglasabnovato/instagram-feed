@@ -102,7 +102,7 @@
 - [x] 3.4.1. componentes em formato de função
 - [x] 3.4.2. componentes em formato de classe
 - [x] 3.5. Link é o componente react que funciona como o `<a>` do html mais poderoso
-- [x] 3.6. warning: a api que criamos não está retornando as imagens
+- [x] 3.6. warning: a api que criamos não está retornando as imagens no post
 - [x] 3.7. tratando o formulário de um novo posto em `New.js`
 - [x] 3.8. like
 - [x] 3.9. real time : socket.io : `yarn add socket.io-client`
