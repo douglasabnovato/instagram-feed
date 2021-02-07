@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/img-movile-startup.jpg" />
+    <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/img-movile-startup.jpeg" />
 </h1>
 
 <h4 align="center"> 
