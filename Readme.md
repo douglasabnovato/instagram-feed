@@ -144,7 +144,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 🚀 Como executar o projeto
 
 Podemos considerar este projeto como sendo com uma parte:
-1. Front End (pasta web)  
+1. Front End Web
+1. Back End 
+3. Front End Mobile
 
 ### Pré-requisitos
 
