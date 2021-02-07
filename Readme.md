@@ -124,7 +124,8 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 ### Web - v1.0
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="SiteEstaticoReactJS" title="#SiteEstaticoReactJS" src="./src/assets/tela-1.jpg" width="400px"> 
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/img-movile-startup.jpeg" width="400px">
+</p> 
 
 ## 🛠 Tecnologias
 
