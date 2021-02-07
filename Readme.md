@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/img-movile-startup.jpeg" />
+    <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicação.jpg" />
 </h1>
 
 <h4 align="center"> 
@@ -124,7 +124,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 ### Web - v1.0
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/img-movile-startup.jpeg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicação.jpg" width="400px">
 </p> 
 
 ## 🛠 Tecnologias
@@ -164,11 +164,23 @@ $ git clone https://github.com/douglasabnovato/instagram-feed
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd instagram-feed 
 
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd instagram-feed/backend
+
 # Instale as dependências
 $ npm install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run start
+$ npm run dev
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd instagram-feed/frontend
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
