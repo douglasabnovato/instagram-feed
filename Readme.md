@@ -48,7 +48,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] 2.5.1. `yarn.lock`: arquivo de logs
 - [x] 2.5.2. scripts : dev : `node src/index.js` >> `http://localhost:3333/` : PORTA DO backend
 - [x] 2.5.3. Nodemon : `yarn add nodemon -D` - script dev no package.json - `yarn dev` : atualiza o servidor a cada mudança - `scripts : dev : nodemon src/index.js`
-- [x] 2.5.4. rodar a aplicação: `yarn dev`
+- [x] 2.5.4. rodar a aplicação: `yarn dev` ou `npm run dev`
 - [x] 2.6.1. MongoDB Atlas - bd não relacional online: `https://www.mongodb.com/cloud/atlas`
 - [x] 2.6.2. criar um cluster >> connect >> Your Application >> copy na string de acesso
 - [x] 2.6.3. criar db access >> alterar informações na string de acesso
