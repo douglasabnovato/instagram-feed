@@ -110,6 +110,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] 3.7. tratando o formulário de um novo posto em `New.js`
 - [x] 3.8. like
 - [x] 3.9. real time : socket.io : `yarn add socket.io-client`
+- [x] revisado o funcionamento do frontend web
 
 #### Desenvolvendo o app mobile 
 
