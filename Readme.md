@@ -28,8 +28,12 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
  
 ## 🎨 Layout
 
+🎨 Instagram Feed - Mobile
+
 ![Preview](./frontend/src/assets/preview.gif)
  
+🎨 Instagram Feed - Web
+
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="400px">
   <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-1.jpg" width="400px">
