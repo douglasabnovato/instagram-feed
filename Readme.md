@@ -28,6 +28,14 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
  
 ## 🎨 Layout
 
+![Preview](./frontend/src/assets/preview.gif)
+ 
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-1.jpg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-2.jpg" width="400px">
+</p> 
+
 #### Ambiente de desenvolvimento
 
 - [x] 1.1. NodeJS - `https://nodejs.org/en/` : versão LTS: v12.18.3 - `node -v`;
@@ -128,15 +136,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] arquivo `routes.js`
 
 #### Funcionalidades Avançadas
-- [ ] Tarefas  
-
-### Web - v1.0
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-1.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-2.jpg" width="400px">
-</p> 
+- [ ] Tarefas   
 
 ## 🛠 Tecnologias
 
