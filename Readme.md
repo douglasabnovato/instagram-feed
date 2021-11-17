@@ -1,7 +1,3 @@
-<h1 align="center">
-    <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" />
-</h1>
-
 <h4 align="center"> 
 	🚧 Instagram Feed 🚀 em construção... 🚧
 </h4> 
