@@ -123,6 +123,9 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] criar o projeto mobile : `react-native init instarocket`
 - [x] rodar a aplicação com o emulador aberto : `react-native run-android`
 - [x] nas próximas vezes : `react-native start`
+- [x] biblioteca para navegação: `yarn add reat-navigation react-native-gesture-handler`
+- [x] link nativo: `react-native link react-native-gesture-handler`
+- [x] arquivo `routes.js`
 
 #### Funcionalidades Avançadas
 - [ ] Tarefas  
