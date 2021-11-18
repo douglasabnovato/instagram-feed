@@ -71,6 +71,35 @@ export default class New extends Component {
 
 const styles = StyleSheet.create({ 
 
+    container: {
+        flex: 1,
+        paddingHorizontal: 20,
+        paddingTop: 30,
+    },  
+
+    selectionButton: {
+        borderRadius: 4,
+        borderWidth: 1,
+        boderColor: "#ccc",
+        borderStyle: "dashed",
+        height: 42,
+        justifyContent: "center",
+        aligntItems: "center",
+    },
+
+    selectionButtonText: {
+        fontSize: 15,
+        color: "#666",
+    },
+
+    preview: {
+        widht: 100,
+        height: 100,
+        marginTop: 10,
+        alginSekf: "center",
+        borderRadius: 4,
+    },
+
     input: {
         borderRadius:4,
         borderWidth: 1,
@@ -81,11 +110,18 @@ const styles = StyleSheet.create({
     },
 
     shareButton: {
-
+        backgroundColor: "#7159c1",
+        borderRadius: 4,
+        height: 42,
+        marginTop: 15,
+        justifyContent: "center",
+        alignItems: "center", 
     },
 
     shareButtonText: {
-
+        fontWeight: "bold",
+        fontSize: 16,
+        color: "#FFF",
     },
 
 });
