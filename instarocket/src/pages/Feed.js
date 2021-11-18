@@ -31,7 +31,7 @@ export default class Feed extends Component {
     render() {
         return (
             <View style={styles.container}>
-                
+
                 <FlatList 
                     data={ this.state.feed }
                     keyExtractor={ post => post._id }
@@ -47,10 +47,31 @@ export default class Feed extends Component {
                                 </View>
 
                                 <Image source={more}/>
+
                             </View> 
 
                             <Image style={styles.feedImage} source={{ url: `http://localhost:3333/${item.image}` }}/>
- 
+
+                            <View style={styles.feedItemFooter}>
+                                <View style={styles.actions}>
+                                    <TouchableOpacity onPress={() => {}}>
+                                        <Image source={like}/>
+                                    </TouchableOpacity>
+                                    
+                                    <TouchableOpacity onPress={() => {}}>
+                                        <Image source={comment}/>
+                                    </TouchableOpacity> 
+                                    
+                                    <TouchableOpacity onPress={() => {}}>
+                                        <Image source={send}/>
+                                    </TouchableOpacity>
+                                </View>
+
+                                <Text style={styles.likes}>{item.likes} curtidas</Text>
+                                <Text style={styles.description}>{item.description} </Text>
+                                <Text style={styles.hashtags}>{item.hashtags} </Text>
+                            </View>
+
                         </View>
  
                     )}
