@@ -135,6 +135,8 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] link nativo: `react-native link react-native-gesture-handler`
 - [x] arquivo `routes.js`
 - [x] Navegação New e Feed
+- [x] estilização do front New e Feed
+- [x] socket.io-client - realtime: `yarn add socket.io-client`
 
 #### Funcionalidades Avançadas
 - [ ] Tarefas   
