@@ -19,7 +19,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] Configuiração de ambiente
 - [x] Construindo o backend
 - [x] Construindo a interface a web
-- [ ] Desenvolver o app mobile
+- [ ] Desenvolver o app mobile - doing
 - [ ] Criar funcionalidades avançadas
  
 ## 🎨 Layout
@@ -103,7 +103,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] 2.16.5. config `upload.js` : determinado o local para armazenar os arquvios de upload
 - [x] 2.16.6. libs express mongo multer sharp 
 
-#### Construindo a interface web - FRONTEND
+#### Construindo a interface web - FRONTEND web
 
 - [x] 3.1. rodar a aplicação backend: `yarn dev` em `http://localhost:3333/`
 - [x] 3.1.1. criando a aplicação em reactjs: `npx create-react-app frontend`
@@ -120,7 +120,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] 3.9. real time : socket.io : `yarn add socket.io-client`
 - [x] revisado o funcionamento do frontend web
 
-#### Desenvolvendo o app mobile 
+#### Desenvolvendo o app - FRONTEND mobile 
 
 - [x] Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
 - [x] Chocolatey
@@ -134,6 +134,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] biblioteca para navegação: `yarn add reat-navigation react-native-gesture-handler`
 - [x] link nativo: `react-native link react-native-gesture-handler`
 - [x] arquivo `routes.js`
+- [x] Navegação New e Feed
 
 #### Funcionalidades Avançadas
 - [ ] Tarefas   
