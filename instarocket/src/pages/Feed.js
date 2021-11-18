@@ -50,9 +50,10 @@ export default class Feed extends Component {
 
                             </View> 
 
-                            <Image style={styles.feedImage} source={{ url: `http://localhost:3333/${item.image}` }}/>
+                            <Image style={styles.feedImage} source={{ url: `http://localhost:3333/files/${item.image}` }}/>
 
                             <View style={styles.feedItemFooter}>
+
                                 <View style={styles.actions}>
                                     <TouchableOpacity onPress={() => {}}>
                                         <Image source={like}/>
@@ -70,6 +71,7 @@ export default class Feed extends Component {
                                 <Text style={styles.likes}>{item.likes} curtidas</Text>
                                 <Text style={styles.description}>{item.description} </Text>
                                 <Text style={styles.hashtags}>{item.hashtags} </Text>
+
                             </View>
 
                         </View>
@@ -83,4 +85,38 @@ export default class Feed extends Component {
 
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+
+    container:{
+        flex:1,
+    },
+
+    feedItem: {
+        marginTop: 20,
+    },
+
+    feedItemHeader: {
+        paddingHorizontal: 15,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
+
+    name: {
+        fontSize: 14,
+        color: "#000",
+    },
+
+    place: {
+        fontSize: 12,
+        color: "#666",
+        marginTop: 2,
+    },
+
+    feedImage: {
+        width: "100%",
+        height: 400,
+        marginVertical: 15,
+    }
+ 
+});
