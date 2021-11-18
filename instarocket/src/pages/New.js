@@ -69,3 +69,23 @@ export default class New extends Component {
     }
 }
 
+const styles = StyleSheet.create({ 
+
+    input: {
+        borderRadius:4,
+        borderWidth: 1,
+        borderColor: "#ddd",
+        padding: 15,
+        marginTop: 10,
+        fontSize: 16,
+    },
+
+    shareButton: {
+
+    },
+
+    shareButtonText: {
+
+    },
+
+});
