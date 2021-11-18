@@ -137,6 +137,10 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] Navegação New e Feed
 - [x] estilização do front New e Feed
 - [x] socket.io-client - realtime: `yarn add socket.io-client`
+- [x] criar novo post
+- [x] camera e galeria de fotos: `yarn add react-native-image-picker`
+- [x] link nativo: `react-native link react-native-image-picker`
+- [x] ir ao docs de permissão e copiar e colar trecho de ios e android.
 
 #### Funcionalidades Avançadas
 - [ ] Tarefas   
