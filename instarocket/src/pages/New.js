@@ -9,6 +9,7 @@ export default class New extends Component {
     };
 
     state = {
+        preview: null,
         author: "",
         place: "",
         description: "",
@@ -19,7 +20,16 @@ export default class New extends Component {
         ImagePicker.showImagePicker({
             title: "Selecionar imagem",
         }, upload => {
-
+            if(upload.error){
+                console.log("Error");
+            } else if(upload.didCancel){
+                console.log("Used canceled");
+            } else {
+                const preview = {
+                    uri: `data:image/jpeg;base64,${upload.data}`,
+                }
+                this.setState({ preview });
+            }
         })
     }
 
@@ -29,6 +39,8 @@ export default class New extends Component {
                 <TouchableOpacity style={ styles.selectButton } onPress={this.handleSelectImage}>
                     <Text style={ styles.selectButtonText }>Selecionar Imagem</Text>
                 </TouchableOpacity>
+
+                { this.state.preview && <Image style={styles.preview} source={this.state.preview}/> }
 
                 <TextInput
                     style={style.input}
