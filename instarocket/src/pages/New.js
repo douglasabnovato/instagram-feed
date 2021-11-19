@@ -10,6 +10,7 @@ export default class New extends Component {
 
     state = {
         preview: null,
+        image: null,
         author: "",
         place: "",
         description: "",
@@ -28,7 +29,25 @@ export default class New extends Component {
                 const preview = {
                     uri: `data:image/jpeg;base64,${upload.data}`,
                 }
-                this.setState({ preview });
+
+                let prefix;
+                let ext;
+
+                if(upload.fileName){
+                    [prefix, ext] = upload.fileName.split(".")
+                    ext = ext.toLowerCase() === "heic" ? "jpg" : exit;
+                } else {
+                    prefix = new Date().getTime();
+                    ext = "jpg";
+                }
+
+                const image = {
+                    uri: upload.uri,
+                    type: upload.type,
+                    name: `${prefix}.${ext}`,
+                };
+
+                this.setState({ preview, image });
             }
         })
     }
