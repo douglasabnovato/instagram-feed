@@ -19,7 +19,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] Configuiração de ambiente
 - [x] Construindo o backend
 - [x] Construindo a interface a web
-- [ ] Desenvolver o app mobile - doing
+- [x] Desenvolver o app mobile 
 - [ ] Criar funcionalidades avançadas
  
 ## 🎨 Layout
