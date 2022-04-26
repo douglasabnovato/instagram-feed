@@ -19,7 +19,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] Configuiração de ambiente
 - [x] Construindo o backend
 - [x] Construindo a interface a web
-- [x] Desenvolver o app mobile 
+- [x] Desenvolver o app mobile: não evoluir esse módulo
 - [ ] Criar funcionalidades avançadas
  
 ## 🎨 Layout
@@ -143,7 +143,8 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] ir ao docs de permissão e copiar e colar trecho de ios e android.
 
 #### Funcionalidades Avançadas
-- [ ] Tarefas   
+
+- [ ] Revisar alguns pontos para julgar adaptações   
 
 ## 🛠 Tecnologias
 
@@ -163,9 +164,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 🚀 Como executar o projeto
 
 Podemos considerar este projeto como sendo com uma parte:
-1. Front End Web
-1. Back End 
-3. Front End Mobile
+1. Frontend Web 
+1. Backend 
+3. Frontend Mobile: não vou evoluir esse módulo
 
 ### Pré-requisitos
 
@@ -178,30 +179,25 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode][vsco
 ```bash 
 # Clone este repositório
 $ git clone https://github.com/douglasabnovato/instagram-feed
-
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd instagram-feed 
-
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd instagram-feed/backend
-
 # Instale as dependências
 $ npm install
-
+# Rodar o banco mongodb
+$ mongod
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd instagram-feed/backend
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
-
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd instagram-feed/frontend
-
 # Instale as dependências
 $ npm install
-
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
-
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
-
 ``` 
 
 ## 📝 Licença
