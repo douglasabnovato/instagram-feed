@@ -7,6 +7,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/douglasabnovato/instagram-feed">
   <a href="https://www.twitter.com/douglasabnovato/">
     <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%douglasabnovato%2Finstagram-feed">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="700px">
   </a>
 </p>
 
