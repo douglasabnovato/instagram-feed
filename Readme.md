@@ -1,12 +1,9 @@
 <h4 align="center"> 
-	🚧 Instagram Feed 🚀 em construção... 🚧
+	🚧 Instagram Feed 🚀
 </h4> 
 
-<p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/douglasabnovato/instagram-feed?color=%2304D361">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/douglasabnovato/instagram-feed">
-  <a href="https://www.twitter.com/douglasabnovato/">
-    <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%douglasabnovato%2Finstagram-feed">
+<p align="center">  
+  <a href="https://www.twitter.com/douglasabnovato/">    
   <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="700px">
   </a>
 </p>
@@ -228,5 +225,3 @@ Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www
 [html]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
 [reactnative]: https://reactnative.dev/
-
-Fonte do projeto: [Rocketseat - Omnistack 7.0 - Diego Fernandes](https://rocketseat.com.br) 
