@@ -19,7 +19,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] Construindo a interface a web
 - [x] Desenvolver o app mobile: não evoluir esse módulo
 - [ ] Criar funcionalidades avançadas 
-- [ ] Hospedar a aplicação: frontend e backend
+- [ ] Hospedar a aplicação: frontend web e backend
  
 ## 🎨 Layout
 
@@ -121,25 +121,25 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 
 #### Desenvolvendo o app - FRONTEND mobile 
 
-- [ ] Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
-- [ ] Chocolatey
-- [ ] Node, Python2 e a JDK8
-- [ ] CLI (Command Line Interface) do React Native
-- [ ] SDK do android
-- [ ] genymotion + virtualbox
-- [ ] criar o projeto mobile : `react-native init instarocket`
-- [ ] rodar a aplicação com o emulador aberto : `react-native run-android`
-- [ ] nas próximas vezes : `react-native start`
-- [ ] biblioteca para navegação: `yarn add reat-navigation react-native-gesture-handler`
-- [ ] link nativo: `react-native link react-native-gesture-handler`
-- [ ] arquivo `routes.js`
-- [ ] Navegação New e Feed
-- [ ] estilização do front New e Feed
-- [ ] socket.io-client - realtime: `yarn add socket.io-client`
-- [ ] criar novo post
-- [ ] camera e galeria de fotos: `yarn add react-native-image-picker`
-- [ ] link nativo: `react-native link react-native-image-picker`
-- [ ] ir ao docs de permissão e copiar e colar trecho de ios e android.
+- [x] Para configurarmos o ambiente de desenvolvimento, seguir orientações conforme detalhes no link `https://docs.rocketseat.dev/ambiente-react-native/android/windows` 
+- [x] Chocolatey
+- [x] Node, Python2 e a JDK8
+- [x] CLI (Command Line Interface) do React Native
+- [x] SDK do android
+- [x] genymotion + virtualbox
+- [x] criar o projeto mobile : `react-native init instarocket`
+- [x] rodar a aplicação com o emulador aberto : `react-native run-android`
+- [x] nas próximas vezes : `react-native start`
+- [x] biblioteca para navegação: `yarn add reat-navigation react-native-gesture-handler`
+- [x] link nativo: `react-native link react-native-gesture-handler`
+- [x] arquivo `routes.js`
+- [x] Navegação New e Feed
+- [x] estilização do front New e Feed
+- [x] socket.io-client - realtime: `yarn add socket.io-client`
+- [x] criar novo post
+- [x] camera e galeria de fotos: `yarn add react-native-image-picker`
+- [x] link nativo: `react-native link react-native-image-picker`
+- [x] ir ao docs de permissão e copiar e colar trecho de ios e android.
 
 #### Funcionalidades Avançadas
 
@@ -225,3 +225,5 @@ Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www
 [html]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
 [reactnative]: https://reactnative.dev/
+
+Fonte Rocketseat - Semana Omnistack 7 - Feed Instagram
