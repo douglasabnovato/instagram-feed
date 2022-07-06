@@ -118,6 +118,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 - [x] 3.8. like
 - [x] 3.9. real time : socket.io : `yarn add socket.io-client`
 - [x] revisado o funcionamento do frontend web
+- [x] gerar favicon personalizado
 
 #### Desenvolvendo o app - FRONTEND mobile 
 
@@ -143,7 +144,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 
 #### Funcionalidades Avançadas
 
-- [ ] Revisar alguns pontos para julgar adaptações   
+- [ ]    
 
 ## 🛠 Tecnologias
 
