@@ -35,6 +35,17 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
   <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-2.jpg" width="400px">
 </p> 
 
+## 🚧 Ambiente em Desenvolvimento
+
+- As quatro telas do terminal gitbash rodando o mongodb rodando no backend, o servidor no backend e o frontend, e o git para registrar os commits conforme as tarefas são realizadas.
+
+- O dashboard do mongodb atlas conforme os testes das funcionalidades da aplicação web demonstrando o consumo.
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/ambiente-de-desenvolvimento.jpg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/mongo-db-atlas.jpg" width="400px">
+</p> 
+
 #### Ambiente de desenvolvimento
 
 - [x] 1.1. NodeJS - `https://nodejs.org/en/` : versão LTS: v12.18.3 - `node -v`;
@@ -144,7 +155,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 
 #### Funcionalidades Avançadas
 
-- [ ]    
+- [ ] 
 
 ## 🛠 Tecnologias
 
