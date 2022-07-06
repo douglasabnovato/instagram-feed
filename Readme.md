@@ -46,6 +46,10 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
   <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/mongo-db-atlas.jpg" width="400px">
 </p> 
 
+## 🚧 Construindo o projeto 
+
+O objetivo é anotar informações que julguei importantes que aconteceram durante a construção do projeto.
+
 #### Ambiente de desenvolvimento
 
 - [x] 1.1. NodeJS - `https://nodejs.org/en/` : versão LTS: v12.18.3 - `node -v`;
@@ -155,7 +159,7 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 
 #### Funcionalidades Avançadas
 
-- [ ] 
+- [ ] yarn add eslint -D
 
 ## 🛠 Tecnologias
 
