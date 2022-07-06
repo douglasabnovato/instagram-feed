@@ -159,7 +159,8 @@ O objetivo é anotar informações que julguei importantes que aconteceram duran
 
 #### Funcionalidades Avançadas
 
-- [ ] yarn add eslint -D
+- [ ] backend: yarn add eslint -D
+- [ ] frontend web: yarn add styled-components
 
 ## 🛠 Tecnologias
 
