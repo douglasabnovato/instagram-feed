@@ -165,7 +165,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Podemos considerar este projeto como sendo com uma parte:
 1. Frontend Web 
 1. Backend 
-3. Frontend Mobile: não vou evoluir esse módulo
+3. Frontend Mobile - Próximo passo
 
 ### Pré-requisitos
 
