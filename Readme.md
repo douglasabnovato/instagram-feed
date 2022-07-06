@@ -4,7 +4,7 @@
 
 <p align="center">  
   <a href="https://www.twitter.com/douglasabnovato/">    
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="700px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-3.jpg" width="700px">
   </a>
 </p>
 
@@ -25,14 +25,14 @@ A aplicação é o feed do Instagram com um frontend web, um frontend mobile e u
 
 🎨 Instagram Feed - Mobile
 
-![Preview](./frontend/src/assets/preview.gif)
+![Preview](./.github/preview.gif)
  
 🎨 Instagram Feed - Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-3.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-1.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./frontend/src/assets/tela-aplicacao-2.jpg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-3.jpg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-1.jpg" width="400px">
+  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-2.jpg" width="400px">
 </p> 
 
 #### Ambiente de desenvolvimento
