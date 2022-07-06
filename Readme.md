@@ -159,8 +159,19 @@ O objetivo é anotar informações que julguei importantes que aconteceram duran
 
 #### Funcionalidades Avançadas
 
-- [ ] backend: yarn add eslint -D
-- [ ] frontend web: yarn add styled-components
+- backend: yarn add eslint -D
+- frontend web: yarn add styled-components
+- frontend web: react-hooks escrever componentes em formato de funções
+- bd: trocar mongodb, um banco não relacional, para um banco relacional, como o sql com sequelize.
+- dribbble e sketch: inspirações templates de layout
+- recriar layout
+- typescript
+- redux e contextAPI
+- graphGH
+- permitir escalabilidade 
+- testes automatizados
+- fluxo de deploy manual e automatizar
+- capturar erros em desenvolvimento e em produção
 
 ## 🛠 Tecnologias
 
