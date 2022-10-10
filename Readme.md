@@ -256,4 +256,4 @@ Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
 [reactnative]: https://reactnative.dev/
 
-Fonte Rocketseat - Semana Omnistack 7 - Feed Instagram
+Fonte do projeto: [Rocketseat - Semana Omnistack 7 - Feed Instagram](https://www.rocketseat.com.br/)
