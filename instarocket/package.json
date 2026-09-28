@@ -1,6 +1,6 @@
 {
   "name": "instarocket",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -14,8 +14,14 @@
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.10.3",
-    "react-native-image-picker": "^4.3.0",
-    "socket.io-client": "^4.4.0"
+    "react-native-image-picker": "^4.10.3",
+    "socket.io-client": "^4.4.0",
+    "@react-native-community/masked-view": "^0.1.11",
+    "react-native-reanimated": "^1.13.4",
+    "react-native-safe-area-context": "^3.4.1",
+    "react-native-screens": "^2.18.1",
+    "react-navigation": "^4.4.4",
+    "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

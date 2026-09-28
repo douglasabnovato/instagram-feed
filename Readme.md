@@ -1,52 +1,61 @@
-<h4 align="center"> 
-	🚧 Instagram Feed 🚀
-</h4> 
-
-<p align="center">  
-  <a href="https://www.twitter.com/douglasabnovato/">    
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-3.jpg" width="700px">
-  </a>
+<p align="center">
+  <img alt="alô, uai" src="./frontend/src/assets/logo.svg" width="72px">
 </p>
+
+<h1 align="center">alô, uai</h1>
+
+<p align="center">Feed de fotos com prosa mineira: publique uma foto, conte o causo e veja as curtidas chegarem em tempo real.</p>
+
+<p align="center">
+  <img alt="Feed do alô, uai na web" src="./docs/imagens/feed-web.jpg" width="700px">
+</p>
+
+## 🌐 Em produção
+
+- Web: https://alo-uai-web.onrender.com (site estático no Render)
+- API: https://alo-uai-api.onrender.com/health (Render Free + MongoDB Atlas M0)
+- Passo a passo do deploy: [docs/DEPLOY.md](docs/DEPLOY.md). O app React Native (`instarocket/`, nome técnico da pasta) não é publicado.
+- Limites do plano gratuito: a API dorme após 15 min sem acesso (cerca de 1 min para acordar) e as imagens enviadas ficam em disco temporário.
+- Demonstração pública: não envie fotos de pessoas nem dados pessoais.
 
 ## 💻 Sobre o projeto
 
-♻️ Instagram Feed
+O alô, uai é um feed de fotos com identidade própria, inspirado no jeito mineiro de puxar conversa. Nasceu como estudo de um feed social (backend, web e mobile) e foi revisado para servir de demonstração pública.
 
-A aplicação é o feed do Instagram com um frontend web, um frontend mobile e um backend.
+**O que demonstra**
 
-- [x] Configuiração de ambiente
-- [x] Construindo o backend
-- [x] Construindo a interface a web
-- [x] Desenvolver o app mobile: não evoluir esse módulo
-- [ ] Criar funcionalidades avançadas 
-- [ ] Hospedar a aplicação: frontend web e backend
+| Funcionalidade | Como foi feita |
+|---|---|
+| Publicar foto com nome, local, causo e hashtags | Upload multipart (multer), tipo validado pelo conteúdo, até 5 MB, redimensionamento com sharp |
+| Curtidas e novos posts em tempo real | Socket.IO: o feed atualiza sem recarregar, em todas as abas abertas |
+| Feed paginado do mais recente | MongoDB com índice em `createdAt` e cursor `before` |
+| Identidade visual própria | Paleta creme, café, terracota, milho e serra; símbolo em SVG original; ícones próprios |
+| Avatar com iniciais, tempo relativo e hashtags em chips | Funções puras em `frontend/src/lib/format.js`, cobertas por testes |
+| Acessibilidade | Contraste AA, foco visível, textos alternativos, `aria-live` nas curtidas, movimento reduzido respeitado |
+| Proteção de demonstração | Limite de publicações e curtidas por IP, aviso de "não envie fotos de pessoas" |
 
-.: o foco é no backend, no frontend web e responsividade
- 
+- [x] Configuração de ambiente
+- [x] Backend (API + tempo real)
+- [x] Interface web com identidade própria
+- [x] App mobile: congelado (React Native CLI 0.61)
+- [x] Hospedagem gratuita: web e API no Render
+
 ## 🎨 Layout
 
-🎨 Instagram Feed - Mobile
-
-![Preview](./.github/preview.gif)
- 
-🎨 Instagram Feed - Web
-
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-3.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-1.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/tela-aplicacao-2.jpg" width="400px">
-</p> 
+  <img alt="Formulário de nova publicação" src="./docs/imagens/publicar-web.jpg" width="480px">
+  <img alt="Feed no celular" src="./docs/imagens/feed-mobile.jpg" width="220px">
+</p>
 
-## 🚧 Ambiente em Desenvolvimento
+**Paleta**
 
-- As quatro telas do terminal gitbash rodando o mongodb rodando no backend, o servidor no backend e o frontend, e o git para registrar os commits conforme as tarefas são realizadas.
-
-- O dashboard do mongodb atlas conforme os testes das funcionalidades da aplicação web demonstrando o consumo.
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/ambiente-de-desenvolvimento.jpg" width="400px">
-  <img alt="InstagramFeed" title="#InstagramFeed" src="./.github/mongo-db-atlas.jpg" width="400px">
-</p> 
+| Token | Cor | Uso |
+|---|---|---|
+| `--creme` | `#FBF6EE` | Fundo |
+| `--cafe` | `#3B2417` | Texto e marca |
+| `--terracota` / `--terracota-forte` | `#C8553D` / `#A8432F` | Símbolo / botões (contraste 5,98:1) |
+| `--milho` | `#F2C14E` | Destaques e anel do avatar |
+| `--serra` | `#2F6B4F` | Hashtags e foco |
 
 ## 🚧 Construindo o projeto 
 
@@ -66,7 +75,7 @@ O objetivo é anotar informações que julguei importantes que aconteceram duran
 - [x] 1.5.3. `rocketseat reactjs`
 - [x] 1.5.4. `Material icon theme`
 - [x] 1.5.5. fonte `fira code`
-- [x] 1.6. Sketch cloud - desenhar a aplicação : Instagram Feed
+- [x] 1.6. Sketch cloud - desenhar a aplicação (layout original, substituído pela identidade do alô, uai)
 
 #### Criando a base de dados da aplicação - BACKEND 
 
@@ -188,50 +197,48 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Yarn][yarn]
 - [Node.js][nodejs]
 - [React Native][reactnative]
-- [Zeit Now](https://vercel.com/) 
+- [Render](https://render.com/) + [MongoDB Atlas](https://www.mongodb.com/atlas) (hospedagem gratuita atual; a versão original usava o Zeit Now)
 
 ## 🚀 Como executar o projeto
 
-Podemos considerar este projeto como sendo com uma parte:
-1. Frontend Web 
-1. Backend 
-3. Frontend Mobile - Próximo passo
+Partes: **backend** (API + tempo real), **frontend** (web) e **instarocket** (app React Native, congelado; o nome da pasta ficou por estar amarrado ao projeto nativo).
 
-### Pré-requisitos
+```bash
+# Backend (http://localhost:3333) — MongoDB local (mongod) ou Atlas M0
+cd backend && cp .env.example .env   # preencha MONGODB_URI
+npm install && npm run dev
+npm test
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js][nodejs]. 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
+# Frontend web (http://localhost:5173)
+cd frontend && cp .env.example .env
+npm install && npm run dev
+npm test
+```
 
-### 🧭 Rodando a aplicação web (Front End)
+App: ajuste o endereço em `instarocket/src/config.js` e rode `npx react-native run-android` (não validado nesta revisão).
 
-```bash 
-# Clone este repositório
-$ git clone https://github.com/douglasabnovato/instagram-feed
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd instagram-feed 
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd instagram-feed/backend
-# Instale as dependências
-$ npm install
-# Rodar o banco mongodb
-$ mongod
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd instagram-feed/backend
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd instagram-feed/frontend
-# Instale as dependências
-$ npm install
-# Execute a aplicação em modo de desenvolvimento
-$ npm start
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
-``` 
+### Versão 2.0 (revisão de qualidade)
+
+- [x] Senha do MongoDB removida do código (`.env`)
+- [x] Upload seguro: tipo validado pelo conteúdo, até 5 MB, nome aleatório, rotação corrigida
+- [x] Feed ordenado do mais recente (o campo `createAt` não existia) e paginado
+- [x] Curtida atômica; post inexistente não derruba a API
+- [x] Web em Vite 8 + React 18 com estados de carregando, vazio e erro; acessível (WCAG AA)
+- [x] App: corrigidos os bugs de JS (feed apagado a cada curtida, campos que gravavam sempre o autor, API antiga do image-picker)
+- [x] Testes automatizados na API e no web
+
+### Versão 2.1 (identidade própria)
+
+- [x] Novo nome e marca: **alô, uai** (a versão anterior imitava o nome e o logo de uma rede social)
+- [x] Símbolo, favicon e ícones próprios em SVG; paleta e tipografia novas
+- [x] Avatar com iniciais, tempo relativo, hashtags em chips e animação de curtida
+- [x] Aviso de demonstração pública no rodapé e no formulário
+
+Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUITETURA.md) e [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md).
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença MIT.
+Este projeto está sob a licença MIT.
 
 ---
 
@@ -256,4 +263,4 @@ Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
 [reactnative]: https://reactnative.dev/
 
-Fonte do projeto: [Rocketseat - Semana Omnistack 7 - Feed Instagram](https://www.rocketseat.com.br/)
+Origem: projeto de estudo de feed de fotos da Semana Omnistack 7 ([Rocketseat](https://www.rocketseat.com.br/)), reescrito com identidade própria.

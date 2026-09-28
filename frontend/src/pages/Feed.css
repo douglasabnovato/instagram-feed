@@ -1,68 +1,96 @@
-section#post-list{
-    width: 100%;
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 0 30px;    
+/* Estilos do feed do alô, uai: cartões arredondados, avatar com iniciais e hashtags em chips */
+section#post-list {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 8px 20px 0;
 }
 
-section#post-list article{
-    background: #fff;
-    border: 1px solid #ddd;
-    margin-top: 30px;
-} 
-
-section#post-list article header{
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+section#post-list .post {
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  margin-top: 24px;
+  overflow: hidden;
 }
 
-section#post-list article header .user-info{
-    display: flex;
-    flex-direction: column;
+section#post-list .post header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
 }
 
-section#post-list article header .user-info span{
-    font-size: 13px;
+section#post-list .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px var(--creme), 0 0 0 5px var(--milho);
 }
 
-section#post-list article header .user-info span.place{
-    font-size: 11px;
-    color: #666;
-    margin-top: 3px;
+section#post-list .user-info { display: flex; flex-direction: column; min-width: 0; }
+section#post-list .author { font-weight: 700; }
+section#post-list .meta { font-size: 13px; color: var(--texto-suave); }
+
+section#post-list .photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--linha);
 }
 
-section#post-list article > img {
-    width: 100%;
+section#post-list .post footer { padding: 12px 16px 16px; }
+section#post-list .actions { display: flex; align-items: center; gap: 8px; }
+
+section#post-list .like {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--cafe);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-section#post-list article footer {
-    padding: 20px;
+section#post-list .like:hover { background: #fbe9e4; color: var(--terracota-forte); }
+section#post-list .like.liked { color: var(--terracota); animation: curtiu 0.35s ease; }
+
+@keyframes curtiu {
+  40% { transform: scale(1.25); }
+  100% { transform: scale(1); }
 }
 
-section#post-list article footer .actions {
-    margin-bottom: 10px;
+section#post-list .description { margin-top: 8px; }
+
+section#post-list .tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
 }
 
-section#post-list article footer .actions button{
-    background: transparent;
-    border: 0;
-    cursor: pointer;
+section#post-list .tags li {
+  background: var(--serra-clara);
+  color: var(--serra);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
-section#post-list article footer .actions img{
-    height: 20px;
-    margin-right: 10px;
+@media (max-width: 480px) {
+  section#post-list { padding: 0 10px; }
+  section#post-list .post { margin-top: 14px; }
 }
-
-section#post-list article footer p {
-    font-size: 13px;
-    margin-top: 2px;
-    line-height: 18px;
-}
-
-section#post-list article footer p span { 
-    color: #7159c1;
-    display: block;
-}
+/* Fim de Feed.css */
