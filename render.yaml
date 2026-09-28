@@ -1,0 +1,38 @@
+# Blueprint do Render (plano gratuito): API Node e web estático, com as URLs cruzadas já fixadas
+services:
+  - type: web
+    name: alo-uai-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://alo-uai-web.onrender.com
+      - key: PUBLIC_URL
+        value: https://alo-uai-api.onrender.com
+  - type: web
+    name: alo-uai-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: build
+    autoDeployTrigger: commit
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: VITE_API_URL
+        value: https://alo-uai-api.onrender.com
