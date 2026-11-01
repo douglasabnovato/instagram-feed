@@ -1,4 +1,4 @@
-> **Projeto de estudo.** Estado conferido em 30/10/2026: 2 endereço(s) citado(s) abaixo não responde(m). Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
+> **Projeto de estudo.** Estado conferido em 31/10/2026: os endereços que seguem fora do ar foram retirados deste README. Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
 
 <p align="center">
   <img alt="alô, uai" src="./frontend/src/assets/logo.svg" width="72px">
@@ -12,10 +12,9 @@
   <img alt="Feed do alô, uai na web" src="./docs/imagens/feed-web.jpg" width="700px">
 </p>
 
-## 🌐 Em produção
+## 🌐 Publicação
 
-- Web: https://alo-uai-web.onrender.com (site estático no Render)
-- API: https://alo-uai-api.onrender.com/health (Render Free + MongoDB Atlas M0)
+- Fora do ar desde a conferência de 31/10/2026; para ver o projeto, rode localmente (seção "Como executar o projeto").
 - Passo a passo do deploy: [docs/DEPLOY.md](docs/DEPLOY.md). O app React Native (`instarocket/`, nome técnico da pasta) não é publicado.
 - Limites do plano gratuito: a API dorme após 15 min sem acesso (cerca de 1 min para acordar) e as imagens enviadas ficam em disco temporário.
 - Demonstração pública: não envie fotos de pessoas nem dados pessoais.
