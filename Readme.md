@@ -227,6 +227,9 @@ npm test
 
 App: ajuste o endereço em `instarocket/src/config.js` e rode `npx react-native run-android` (não validado nesta revisão).
 
+App móvel: React Native CLI 0.61, sem Expo. O CI instala com `legacy-peer-deps` e roda os testes; não compila Android nem iOS.
+
+
 ### Versão 2.0 (revisão de qualidade)
 
 - [x] Senha do MongoDB removida do código (`.env`)
