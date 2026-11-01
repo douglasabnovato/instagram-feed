@@ -12,6 +12,15 @@
   <img alt="Feed do alô, uai na web" src="./docs/imagens/feed-web.jpg" width="700px">
 </p>
 
+## 🧠 O que aprendi
+
+> Proposta de 01/11/2026, escrita a partir do código e das dependências. Ajuste com a sua experiência.
+
+- Publicar imagens com Multer e processá-las com Sharp.
+- Atualizar o feed em tempo real com Socket.IO.
+- Modelar dados com Mongoose e validar entradas com Zod.
+- Proteger uma demonstração pública com limite de requisições.
+
 ## 🌐 Publicação
 
 - Fora do ar desde a conferência de 31/10/2026; para ver o projeto, rode localmente (seção "Como executar o projeto").
