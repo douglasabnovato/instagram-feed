@@ -232,7 +232,7 @@ App móvel: React Native CLI 0.61, sem Expo. O CI instala com `legacy-peer-deps`
 
 ### Versão 2.0 (revisão de qualidade)
 
-- [x] Senha do MongoDB removida do código (`.env`)
+- [x] Conexão do MongoDB lida do `.env` (o arquivo antigo com a senha só saiu em 03/11/2026; a senha segue no histórico do Git)
 - [x] Upload seguro: tipo validado pelo conteúdo, até 5 MB, nome aleatório, rotação corrigida
 - [x] Feed ordenado do mais recente (o campo `createAt` não existia) e paginado
 - [x] Curtida atômica; post inexistente não derruba a API
@@ -246,6 +246,23 @@ App móvel: React Native CLI 0.61, sem Expo. O CI instala com `legacy-peer-deps`
 - [x] Símbolo, favicon e ícones próprios em SVG; paleta e tipografia novas
 - [x] Avatar com iniciais, tempo relativo, hashtags em chips e animação de curtida
 - [x] Aviso de demonstração pública no rodapé e no formulário
+
+### Ciclo de 03/11/2026
+
+- [x] Apagado o servidor antigo (`backend/src/index.js` e arquivos ligados), que ainda tinha a senha do Atlas, e o código antigo do CRA no web
+- [x] Feed: botão "Tentar novamente" quando a carga falha e "Carregar mais fotos" (paginação por data)
+- [x] Curtida que falha desfaz o coração e avisa
+- [x] CI também nos PRs para `developer/**`
+
+### Próximos passos
+
+- Revogar o usuário antigo no MongoDB Atlas (responsável)
+- Proteger a `master` com PR e CI obrigatórios (responsável)
+- Republicar no Render (responsável) e conferir o link
+- Decidir o app móvel e os PRs do Dependabot do `instarocket/`
+- Aviso de tempo real desconectado e teste de navegador do fluxo publicar → feed
+
+As issues abertas têm os critérios de cada item.
 
 Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUITETURA.md) e [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md).
 
