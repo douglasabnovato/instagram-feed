@@ -6,7 +6,7 @@ Plano de ação para publicar a API e o feed web em hospedagem gratuita. O app R
 
 ## 1. Desafio
 
-Colocar no ar, sem custo, o feed de fotos alô, uai, com API Express 5 + MongoDB, **upload e redimensionamento de imagens (sharp)** e **curtidas em tempo real (Socket.IO)**, depois de um vazamento: a senha do usuário `dbFeedInstagram` do MongoDB Atlas ficou no histórico do Git (mesmo cluster do aircnc).
+Colocar no ar, sem custo, o feed de fotos alô, uai, com API Express 5 + MongoDB, **upload e redimensionamento de imagens (sharp)** e **curtidas em tempo real (Socket.IO)**, depois de um vazamento: a senha do usuário antigo do MongoDB Atlas ficou no histórico do Git (mesmo cluster do aircnc).
 
 ## 2. Conteúdo
 
@@ -68,7 +68,7 @@ Recomendação para o lote (my-money-app, aircnc e alô, uai): **um único clust
 
 ### Etapa 0 · Segredos (urgente)
 
-1. No **MongoDB Atlas → Database Access**, **apague o usuário `dbFeedInstagram`**. A senha dele está no histórico público do Git; apagar o usuário é o que a invalida.
+1. No **MongoDB Atlas → Database Access**, **apague o usuário antigo** (o que estava em `backend/src/index.js`, apagado em 03/11/2026). A senha dele está no histórico público do Git; apagar o usuário é o que a invalida.
 
 ### Etapa 1 · Atlas e validação local (Git Bash)
 
@@ -76,13 +76,7 @@ Recomendação para o lote (my-money-app, aircnc e alô, uai): **um único clust
 2. **Network Access → Add IP Address → Allow Access from Anywhere** (`0.0.0.0/0`), se ainda não existir.
 3. **Database → Connect → Drivers**: copiar a URI e acrescentar `/alo_uai` antes do `?`.
 4. `cd /c/ambiente-projeto/ser-mvp/instagram-feed`
-5. Remover os arquivos substituídos no ciclo MVP:
-   ```bash
-   git rm backend/src/index.js backend/src/routes.js backend/src/config/upload.js
-   git rm -r backend/src/controllers
-   git rm frontend/public/index.html frontend/src/index.js frontend/src/App.js frontend/src/routes.js frontend/src/services/api.js
-   git rm frontend/src/components/Header.js frontend/src/pages/Feed.js frontend/src/pages/New.js
-   ```
+5. Arquivos substituídos no ciclo MVP: já removidos (o último lote saiu em 03/11/2026, com o `backend/src/index.js`, que tinha a senha antiga).
 6. Remover a identidade antiga (logo, favicon, ícones, imagens sem uso, screenshots e o logo do app):
    ```bash
    git rm frontend/public/logo.svg frontend/public/favicon.ico frontend/public/your-logo-32-ico.png
