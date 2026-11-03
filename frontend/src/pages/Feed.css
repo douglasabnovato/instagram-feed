@@ -93,4 +93,20 @@ section#post-list .tags li {
   section#post-list { padding: 0 10px; }
   section#post-list .post { margin-top: 14px; }
 }
+/* Botões de "Tentar novamente" e "Carregar mais" */
+section#post-list .btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--terracota-forte);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+section#post-list .btn:hover { background: var(--cafe); }
+section#post-list .btn:disabled { opacity: 0.7; cursor: wait; }
+section#post-list .more { text-align: center; margin: 24px 0; }
+
 /* Fim de Feed.css */

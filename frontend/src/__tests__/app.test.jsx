@@ -4,7 +4,7 @@ import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import App from "../App";
-import { upsert } from "../pages/Feed";
+import { upsert, appendPage, PAGE_SIZE } from "../pages/Feed";
 import { corDoAvatar, iniciais, separarHashtags, tempoRelativo } from "../lib/format";
 
 vi.mock("socket.io-client", () => ({ io: () => ({ on: vi.fn(), disconnect: vi.fn() }) }));
@@ -49,6 +49,58 @@ describe("feed", () => {
     globalThis.fetch = vi.fn(async () => { throw new TypeError("offline"); });
     renderAt("/");
     expect((await screen.findByRole("alert")).textContent).toMatch(/Sem conexão/);
+  });
+});
+
+describe("falhas e paginação do feed", () => {
+  it("erro 500 mostra a mensagem do servidor e \"Tentar novamente\" recarrega", async () => {
+    routes["GET /posts"] = [500, { errors: ["Banco fora do ar."] }];
+    renderAt("/");
+    expect((await screen.findByRole("alert")).textContent).toMatch(/Banco fora do ar/);
+    routes["GET /posts"] = [200, [POST]];
+    await userEvent.click(screen.getByRole("button", { name: "Tentar novamente" }));
+    expect(await screen.findByAltText("Foto de Douglas: Pão de queijo")).toBeTruthy();
+    expect(screen.queryByRole("alert")).toBeNull();
+  });
+
+  it("curtida que falha desfaz o coração e avisa", async () => {
+    routes["GET /posts"] = [200, [POST]];
+    routes["POST /posts/p1/like"] = [429, { errors: ["Muitas curtidas seguidas. Aguarde um pouco."] }];
+    renderAt("/");
+    const botao = await screen.findByRole("button", { name: "Curtir a foto de Douglas" });
+    await userEvent.click(botao);
+    expect((await screen.findByRole("alert")).textContent).toMatch(/A curtida não foi registrada\. Muitas curtidas/);
+    expect(screen.getByRole("button", { name: "Curtir a foto de Douglas" }).className).not.toContain("liked");
+    expect(screen.getByText("1 curtida")).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "Tentar novamente" })).toBeNull();
+  });
+
+  it("appendPage junta sem repetir", () => {
+    expect(appendPage([POST], [POST, { ...POST, _id: "p2" }]).map((p) => p._id)).toEqual(["p1", "p2"]);
+  });
+
+  it("\"Carregar mais\" pede posts anteriores ao último e some no fim", async () => {
+    const base = Date.parse("2026-11-01T12:00:00Z");
+    const pagina = Array.from({ length: PAGE_SIZE }, (_, i) => ({ ...POST, _id: `a${i}`, author: `Pessoa ${i}`, createdAt: new Date(base - i * 60_000).toISOString() }));
+    const antigos = [{ ...POST, _id: "velho", author: "Antiga", createdAt: new Date(base - 999 * 60_000).toISOString() }];
+    routes["GET /posts"] = [200, pagina];
+    renderAt("/");
+    const mais = await screen.findByRole("button", { name: "Carregar mais fotos" });
+    routes["GET /posts"] = [200, antigos];
+    await userEvent.click(mais);
+    expect(await screen.findByAltText("Foto de Antiga: Pão de queijo")).toBeTruthy();
+    const url = new URL(fetch.mock.calls.at(-1)[0]);
+    expect(url.searchParams.get("before")).toBe(pagina.at(-1).createdAt);
+    expect(screen.getAllByRole("article")).toHaveLength(PAGE_SIZE + 1);
+    expect(screen.queryByRole("button", { name: "Carregar mais fotos" })).toBeNull();
+    expect(screen.getByText(`${PAGE_SIZE + 1} fotos no feed`)).toBeTruthy();
+  });
+
+  it("feed curto não mostra \"Carregar mais\"", async () => {
+    routes["GET /posts"] = [200, [POST]];
+    renderAt("/");
+    await screen.findByAltText("Foto de Douglas: Pão de queijo");
+    expect(screen.queryByRole("button", { name: "Carregar mais fotos" })).toBeNull();
   });
 });
 
