@@ -12,6 +12,30 @@
   <img alt="Feed do alô, uai na web" src="./docs/imagens/feed-web.jpg" width="700px">
 </p>
 
+## Estado e próximos passos (ciclo de 03/11/2026)
+
+Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende de republicar no Render ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)). Para ver o projeto, rode localmente.
+
+**O que foi feito**
+- Servidor antigo, que tinha a senha do banco, apagado do código ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)).
+- "Tentar novamente", curtida que desfaz e "Carregar mais fotos", com testes ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)).
+- CI também nos PRs para a `developer` ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)) e app móvel na verificação ([#75](https://github.com/douglasabnovato/instagram-feed/pull/75)).
+- MVP de estudo registrado na régua N1 ([#83](https://github.com/douglasabnovato/instagram-feed/pull/83)).
+- `axios` do app móvel atualizado ([#77](https://github.com/douglasabnovato/instagram-feed/pull/77)).
+
+**O que queremos fazer**
+- [#85](https://github.com/douglasabnovato/instagram-feed/issues/85) Revogar no Atlas o usuário antigo do MongoDB (responsável).
+- [#86](https://github.com/douglasabnovato/instagram-feed/issues/86) Proteger a `master` com PR e CI obrigatórios (responsável).
+- [#87](https://github.com/douglasabnovato/instagram-feed/issues/87) Republicar o alô, uai no Render (responsável).
+- [#88](https://github.com/douglasabnovato/instagram-feed/issues/88) Decidir o app móvel e os PRs do Dependabot do instarocket.
+- [#89](https://github.com/douglasabnovato/instagram-feed/issues/89) Aviso de tempo real desconectado e reconexão.
+- [#90](https://github.com/douglasabnovato/instagram-feed/issues/90) Teste de navegador do fluxo publicar, ver e curtir.
+- [#91](https://github.com/douglasabnovato/instagram-feed/issues/91) Apagar imagens e ícones da identidade antiga sem uso.
+
+**Onde está a documentação**
+- Estado e critérios: [docs/MVP.md](docs/MVP.md).
+- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md), seção "Ciclo de 03/11/2026".
+
 ## 🧠 O que aprendi
 
 > Proposta de 01/11/2026, escrita a partir do código e das dependências. Ajuste com a sua experiência.
