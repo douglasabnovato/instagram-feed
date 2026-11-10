@@ -4,9 +4,13 @@
 
 **Nível:** Estudo (N1). Os critérios 5 e 7 não se aplicam e saem da conta: 10 critérios.
 
-**Resultado em 03/11/2026:** 8 de 10 critérios aplicáveis atendidos (1, 2, 3, 4, 6, 8, 11, 12); 2 parciais (9 e 10). O resumo anterior dizia 9 de 12 e marcava segurança como "Atende", mas `backend/src/index.js` ainda tinha usuário e senha do Atlas.
+**Resumo:** 9 de 10 aplicáveis atendidos (1, 2, 3, 4, 6, 8, 10, 11, 12); 1 parcial (9). Estado em 10/11/2026: o critério 10 passou a "Atende" com a `master` protegida.
 
-**Finalizado: sim.** Pela regra do ciclo, os dois critérios que faltam dependem do responsável e têm issue aberta com o rótulo `depende-do-responsavel`: 9 (#85) e 10 (#86).
+**Finalizado:** sim
+
+Em 03/11/2026 eram 8 de 10 (9 e 10 parciais). O resumo de antes dizia 9 de 12 e marcava segurança como "Atende", mas `backend/src/index.js` ainda tinha usuário e senha do Atlas.
+
+Pela regra do ciclo, o critério que falta depende do responsável e tem issue aberta com o rótulo `depende-do-responsavel`: 9 (#85).
 
 ## 1. Critérios
 
@@ -21,7 +25,7 @@
 | 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1) | — | 03/11/2026 |
 | 8 | Acessibilidade básica | axe e teclado | Atende: axe sem violações em 2 telas (02/11); foco visível; botões novos com nome; contador em `aria-live` | `global.css`, `Feed.jsx` | 03/11/2026 |
 | 9 | Segurança e conformidade | Riscos decididos | Parcial: o arquivo com a senha saiu do código e a varredura de segredos não acha nada; a senha segue no histórico do Git, e revogar o usuário no Atlas é do responsável | #85; `git grep` do guia de estado; `npm audit --omit=dev` sem alertas | 03/11/2026 |
-| 10 | Entrega confiável | CI verde antes de entrar na principal | Parcial: CI em PRs para `master` e `developer/**`; `master` sem proteção (API 404) | #86 | 03/11/2026 |
+| 10 | Entrega confiável | CI verde antes de entrar na principal | Atende: ruleset `principal-protegida` ativo na `master` (exige PR, bloqueia force push e exclusão); o workflow `CI` roda nos PRs para `master` e `developer/**` | `gh api repos/douglasabnovato/instagram-feed/rulesets`; #86 | 10/11/2026 |
 | 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 5 testes da API, 11 do web e o teste do app no CI | CI do PR do ciclo | 03/11/2026 |
 | 12 | Documentação honesta | O README ensina a rodar, e os números estão certos | Atende: README e este resumo revistos; o README diz que o site está fora do ar | `Readme.md`, este arquivo | 03/11/2026 |
 

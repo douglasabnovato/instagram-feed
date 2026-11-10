@@ -17,6 +17,7 @@
 Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende de republicar no Render ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)). Para ver o projeto, rode localmente.
 
 **O que foi feito**
+- 10/11/2026: a `master` está protegida pelo ruleset `principal-protegida` (exige PR, bloqueia force push e exclusão) ([#86](https://github.com/douglasabnovato/instagram-feed/issues/86)). Critérios: 9 de 10 aplicáveis atendidos.
 - Servidor antigo, que tinha a senha do banco, apagado do código ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)).
 - "Tentar novamente", curtida que desfaz e "Carregar mais fotos", com testes ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)).
 - CI também nos PRs para a `developer` ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)) e app móvel na verificação ([#75](https://github.com/douglasabnovato/instagram-feed/pull/75)).
@@ -25,7 +26,6 @@ Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende
 
 **O que queremos fazer**
 - [#85](https://github.com/douglasabnovato/instagram-feed/issues/85) Revogar no Atlas o usuário antigo do MongoDB (responsável).
-- [#86](https://github.com/douglasabnovato/instagram-feed/issues/86) Proteger a `master` com PR e CI obrigatórios (responsável).
 - [#87](https://github.com/douglasabnovato/instagram-feed/issues/87) Republicar o alô, uai no Render (responsável).
 - [#88](https://github.com/douglasabnovato/instagram-feed/issues/88) Decidir o app móvel e os PRs do Dependabot do instarocket.
 - [#89](https://github.com/douglasabnovato/instagram-feed/issues/89) Aviso de tempo real desconectado e reconexão.
