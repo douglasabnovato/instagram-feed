@@ -1,6 +1,6 @@
 # MVP — instagram-feed (alô, uai)
 
-> Criado em 02/11/2026. Revisto em 03/11/2026 e em 15/11/2026, nos ciclos do processo por repositório. Este arquivo é a fonte única do estado. Testado no Windows, com Node 24. Não houve teste com pessoas nem em aparelho real.
+> Criado em 02/11/2026. Revisto em 03/11/2026, 15/11/2026 e 16/11/2026, nos ciclos do processo por repositório. Este arquivo é a fonte única do estado. Testado no Windows, com Node 24. Não houve teste com pessoas nem em aparelho real.
 
 **Nível:** Estudo (N1). Os critérios 5 e 7 não se aplicam e saem da conta: 10 critérios.
 
@@ -9,6 +9,8 @@
 **Finalizado:** sim
 
 Em 03/11/2026 eram 8 de 10 (9 e 10 parciais). O resumo de antes dizia 9 de 12 e marcava segurança como "Atende", mas `backend/src/index.js` ainda tinha usuário e senha do Atlas.
+
+Em 16/11/2026 (12h01), com os alertas do Dependabot ligados pelo responsável, a leitura deu 34 alertas abertos, todos no `instarocket/package-lock.json` e cobertos pela ADR 0001; o critério 9 segue em "Atende".
 
 Todos os critérios aplicáveis atendem desde 15/11/2026. Os usuários antigos foram revogados (#85), e o app móvel foi congelado com o risco aceito (#88, ADR 0001). O site está no ar no Render.
 
