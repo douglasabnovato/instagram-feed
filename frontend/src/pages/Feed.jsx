@@ -28,21 +28,41 @@ export default function Feed() {
   const [curtidos, setCurtidos] = useState(() => new Set());
   const [tentativa, setTentativa] = useState(0);
   const [mais, setMais] = useState({ temMais: false, carregando: false });
+  const [desconectado, setDesconectado] = useState(false);
 
   useEffect(() => {
     let alive = true;
-    setState({ loading: true, error: "" });
-    api(`/posts?limit=${PAGE_SIZE}`)
-      .then((posts) => {
-        if (!alive) return;
-        setFeed(posts);
-        setMais({ temMais: posts.length === PAGE_SIZE, carregando: false });
-        setState({ loading: false, error: "" });
-      })
-      .catch((err) => alive && setState({ loading: false, error: err.message }));
+    let caiu = false;
+    /* Busca a primeira página; ao reconectar, roda de novo sem apagar o feed da tela */
+    const carregar = () => {
+      setState((s) => ({ ...s, loading: true, error: "" }));
+      return api(`/posts?limit=${PAGE_SIZE}`)
+        .then((posts) => {
+          if (!alive) return;
+          setFeed(posts);
+          setMais({ temMais: posts.length === PAGE_SIZE, carregando: false });
+          setState({ loading: false, error: "" });
+        })
+        .catch((err) => alive && setState({ loading: false, error: err.message }));
+    };
+    carregar();
     const socket = io(API_URL);
     socket.on("post", (p) => setFeed((f) => upsert(f, p)));
     socket.on("like", (p) => setFeed((f) => (f.some((x) => x._id === p._id) ? upsert(f, p) : f)));
+    /* Tempo real: avisa quando cai e, ao voltar, busca o que chegou enquanto estava fora */
+    socket.on("disconnect", () => {
+      if (!alive) return;
+      caiu = true;
+      setDesconectado(true);
+    });
+    socket.on("connect", () => {
+      if (!alive) return;
+      setDesconectado(false);
+      if (caiu) {
+        caiu = false;
+        carregar();
+      }
+    });
     return () => { alive = false; socket.disconnect(); };
   }, [tentativa]);
 
@@ -84,7 +104,10 @@ export default function Feed() {
           )}
         </div>
       )}
-      {state.loading && (
+      {desconectado && (
+        <p className="notice" role="status">Tempo real desconectado. Tentando reconectar…</p>
+      )}
+      {state.loading && feed.length === 0 && (
         <p className="notice" role="status">Carregando o feed… Na versão gratuita, o servidor pode levar até 1 minuto para acordar.</p>
       )}
       {!state.loading && !state.error && feed.length === 0 && (
