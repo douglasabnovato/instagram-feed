@@ -78,3 +78,60 @@ Timebox: 45 min.
 4. `docs/MVP.md` com a régua N1 e o critério 9 corrigido; README com próximos passos.
 
 **Vira issue.** #85, #86, #87 (responsável); #88, #89, #90, #91 (agente).
+
+## Ciclo de 16/11/2026
+
+> Branch `feature/2026-11-16` → `developer/sprint-2026-11-12` → `master`. A sprint de 12/11 ainda não foi para a `master` (PR #98), então o trabalho entra nela. Nível: Estudo (N1).
+
+### Produto
+
+**Problema e público.** O mesmo de 03/11: quem estuda fullstack quer ver upload e tempo real funcionando de ponta a ponta.
+
+**Hipótese e meta.** A mesma: publicar uma foto em até 3 passos e ver a curtida chegar sem recarregar. Neste ciclo, ela passa a ser conferida por um teste no navegador, e não só por testes com `fetch` falso.
+
+**O que a análise achou.**
+- O `MVP.md` dava os critérios 3 e 8 como "Atende" sem o que a régua pede: teste de ponta a ponta no navegador (Playwright) passando no CI, e axe dentro dele. Os testes do web rodam no jsdom.
+- O feed não avisa quando o tempo real cai. No plano gratuito, o servidor dorme, e a tela fica parada sem aviso.
+- São 7 PRs esperando o responsável: a sprint (#98), o mongoose (#99) e 5 do Dependabot no app móvel (#78 a #82), todos com o job `instarocket` quebrado.
+- Arquivos da identidade antiga seguem no repositório e no build.
+
+**O que a pesquisa trouxe.**
+
+| Ideia | O que levamos para o projeto | Fonte |
+|---|---|---|
+| Duas páginas no mesmo teste simulam duas pessoas | O teste abre uma segunda página e confere que a curtida chega nela sem recarregar | [Playwright: páginas](https://playwright.dev/docs/pages) |
+| axe dentro do teste de ponta a ponta | `@axe-core/playwright` no feed e na publicação, com dados reais da API em memória | [Playwright: testes de acessibilidade](https://playwright.dev/docs/accessibility-testing) |
+| O socket avisa quando cai e quando volta | Os eventos `disconnect` e `connect` do cliente ligam e desligam o aviso; ao voltar, o feed busca a primeira página de novo | [Socket.IO: instância do cliente](https://socket.io/docs/v4/client-socket-instance/) |
+
+**Backlog priorizado (impacto × esforço).**
+
+| Prioridade | Item | Impacto | Esforço | Destino |
+|---|---|---|---|---|
+| 1 | Teste de navegador do fluxo, com axe, num job do CI | Alto | Médio | Este ciclo (#90) |
+| 2 | Aviso de tempo real desconectado e reconexão | Médio | Baixo | Este ciclo (#89) |
+| 3 | Apagar a identidade antiga sem uso | Baixo | Baixo | Este ciclo (#91) |
+| 4 | `MVP.md` e README de acordo com a régua | Alto | Baixo | Este ciclo |
+| 5 | Mesclar #98 e #99 | Alto | Baixo | Responsável |
+| 6 | Revogar o usuário antigo no Atlas | Alto | Baixo | Responsável (#85) |
+| 7 | Republicar no Render com banco novo | Médio | Baixo | Responsável (#87) |
+| 8 | Congelar ou migrar o app móvel | Médio | Alto | Decisão do responsável (#88) |
+
+**Fora do escopo.** Contas, comentários, seguidores e armazenamento permanente de imagens.
+
+### Engenharia
+
+**Arquitetura.** Sem mudança. Entra `backend/src/demo.js`: a mesma API com o repositório em memória e o Socket.IO, para o teste de ponta a ponta subir sem banco.
+
+**Riscos.**
+- O teste de navegador depende do tempo real; espera por estado na tela, nunca por tempo fixo.
+- O job novo `e2e` não entra nos checks obrigatórios do ruleset: isso é configuração do responsável.
+
+**Qualidade.** Testes do backend e do web seguem; entra o Playwright com axe. Lint, testes e build antes de cada push.
+
+**Definição de pronto.** CI verde no PR, com o job `e2e` passando; `docs/MVP.md` com evidência de comando, data e resultado.
+
+### Plano de ação
+
+**Este ciclo executa.** #90, #89, #91 e a revisão do `MVP.md` e do README.
+
+**Fica com o responsável.** #85, #87, o merge de #98 e #99 e a decisão de #88.

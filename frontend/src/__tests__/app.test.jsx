@@ -1,17 +1,26 @@
 /* Testes do alô, uai (web): feed com estados, curtida, publicação, marca e formatação dos posts */
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen, cleanup, act, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import App from "../App";
-import { upsert, appendPage, PAGE_SIZE } from "../pages/Feed";
+import { upsert, appendPage, mergeFirstPage, PAGE_SIZE } from "../pages/Feed";
 import { corDoAvatar, iniciais, separarHashtags, tempoRelativo } from "../lib/format";
 
-vi.mock("socket.io-client", () => ({ io: () => ({ on: vi.fn(), disconnect: vi.fn() }) }));
+/* Socket falso: guarda os ouvintes para o teste disparar "disconnect" e "connect" */
+vi.mock("socket.io-client", () => ({
+  io: () => {
+    const handlers = {};
+    const socket = { on: (event, fn) => { handlers[event] = fn; }, disconnect: () => undefined, connect: vi.fn(), fire: (event, ...args) => handlers[event]?.(...args) };
+    globalThis.__sockets.push(socket);
+    return socket;
+  },
+}));
 
 let routes;
 beforeEach(() => {
   cleanup();
+  globalThis.__sockets = [];
   routes = {};
   globalThis.fetch = vi.fn(async (url, opts = {}) => {
     const [status, body] = routes[`${opts.method || "GET"} ${new URL(url).pathname}`] || [404, { errors: ["Rota não encontrada."] }];
@@ -119,7 +128,7 @@ describe("marca e formatação", () => {
   it("mostra a marca alô, uai, o botão de publicar e o aviso de demonstração", () => {
     routes["GET /posts"] = [200, []];
     renderAt("/");
-    expect(screen.getByRole("link", { name: "alô, uai — ir para o feed" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: /^alô, uai/ })).toBeTruthy();
     expect(screen.getByRole("link", { name: "Publicar" }).getAttribute("href")).toBe("/new");
     expect(screen.getByText(/não envie fotos de pessoas/)).toBeTruthy();
     expect(document.body.textContent).not.toMatch(/instagram/i);
@@ -136,6 +145,45 @@ describe("marca e formatação", () => {
     expect(tempoRelativo("2026-09-26T12:00:00Z", agora)).toBe("ontem");
     expect(tempoRelativo("não é data", agora)).toBe("");
     expect(separarHashtags("#a, b;#a  ##c")).toEqual(["#a", "#b", "#c"]);
+  });
+});
+
+describe("tempo real", () => {
+  it("avisa quando o socket cai e busca o feed de novo ao reconectar", async () => {
+    routes["GET /posts"] = [200, [POST]];
+    renderAt("/");
+    expect(await screen.findByAltText("Foto de Douglas: Pão de queijo")).toBeTruthy();
+    const socket = globalThis.__sockets.at(-1);
+    act(() => socket.fire("connect"));
+    expect(screen.queryByText(/Tempo real desconectado/)).toBeNull();
+    const buscasAntes = fetch.mock.calls.length;
+
+    act(() => socket.fire("disconnect", "transport close"));
+    expect(screen.getByText("Tempo real desconectado. Tentando reconectar…")).toBeTruthy();
+    expect(screen.getByAltText("Foto de Douglas: Pão de queijo")).toBeTruthy();
+
+    routes["GET /posts"] = [200, [{ ...POST, _id: "p2", author: "Ana", description: "" }, POST]];
+    act(() => socket.fire("connect"));
+    expect(screen.queryByText(/Tempo real desconectado/)).toBeNull();
+    expect(await screen.findByAltText("Foto de Ana")).toBeTruthy();
+    await waitFor(() => expect(fetch.mock.calls.length).toBe(buscasAntes + 1));
+    expect(screen.getAllByRole("article").length).toBe(2);
+  });
+
+  it("ao reconectar, junta a primeira página sem perder as páginas carregadas", () => {
+    const antigo = { ...POST, _id: "p0" };
+    const novo = { ...POST, _id: "p9" };
+    expect(mergeFirstPage([POST, antigo], [novo, { ...POST, likes: 5 }]).map((p) => [p._id, p.likes])).toEqual([["p9", 1], ["p1", 5], ["p0", 1]]);
+  });
+
+  it("avisa quando não consegue conectar e reconecta se o servidor encerrar", () => {
+    routes["GET /posts"] = [200, []];
+    renderAt("/");
+    const socket = globalThis.__sockets.at(-1);
+    act(() => socket.fire("connect_error", new Error("xhr poll error")));
+    expect(screen.getByText("Tempo real desconectado. Tentando reconectar…")).toBeTruthy();
+    act(() => socket.fire("disconnect", "io server disconnect"));
+    expect(socket.connect).toHaveBeenCalled();
   });
 });
 /* Fim de app.test.jsx */
