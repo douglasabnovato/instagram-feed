@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header id="main-header">
       <nav className="header-content" aria-label="Principal">
-        <Link to="/" className="brand" aria-label="alô, uai — ir para o feed">
+        <Link to="/" className="brand">
           <img src={logo} alt="" width="40" height="40" />
           <span className="brand-text">
             <span className="brand-name">alô, uai</span>
