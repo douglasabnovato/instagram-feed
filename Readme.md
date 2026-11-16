@@ -247,7 +247,7 @@ npm test
 # Sem banco: API de demonstração em memória (as publicações somem ao parar)
 cd backend && npm run demo
 
-# Teste no navegador (sobe a API de demonstração e o web sozinho)
+# Teste no navegador, num terminal novo na raiz do repositório (sobe a API de demonstração e o web sozinho)
 cd frontend && npx playwright install chromium
 npm run test:e2e
 ```

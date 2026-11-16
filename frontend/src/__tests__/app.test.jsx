@@ -4,14 +4,14 @@ import { render, screen, cleanup, act, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import App from "../App";
-import { upsert, appendPage, PAGE_SIZE } from "../pages/Feed";
+import { upsert, appendPage, mergeFirstPage, PAGE_SIZE } from "../pages/Feed";
 import { corDoAvatar, iniciais, separarHashtags, tempoRelativo } from "../lib/format";
 
 /* Socket falso: guarda os ouvintes para o teste disparar "disconnect" e "connect" */
 vi.mock("socket.io-client", () => ({
   io: () => {
     const handlers = {};
-    const socket = { on: (event, fn) => { handlers[event] = fn; }, disconnect: () => undefined, fire: (event, ...args) => handlers[event]?.(...args) };
+    const socket = { on: (event, fn) => { handlers[event] = fn; }, disconnect: () => undefined, connect: vi.fn(), fire: (event, ...args) => handlers[event]?.(...args) };
     globalThis.__sockets.push(socket);
     return socket;
   },
@@ -147,7 +147,6 @@ describe("marca e formatação", () => {
     expect(separarHashtags("#a, b;#a  ##c")).toEqual(["#a", "#b", "#c"]);
   });
 });
-/* Fim de app.test.jsx */
 
 describe("tempo real", () => {
   it("avisa quando o socket cai e busca o feed de novo ao reconectar", async () => {
@@ -168,5 +167,23 @@ describe("tempo real", () => {
     expect(screen.queryByText(/Tempo real desconectado/)).toBeNull();
     expect(await screen.findByAltText("Foto de Ana")).toBeTruthy();
     await waitFor(() => expect(fetch.mock.calls.length).toBe(buscasAntes + 1));
+    expect(screen.getAllByRole("article").length).toBe(2);
+  });
+
+  it("ao reconectar, junta a primeira página sem perder as páginas carregadas", () => {
+    const antigo = { ...POST, _id: "p0" };
+    const novo = { ...POST, _id: "p9" };
+    expect(mergeFirstPage([POST, antigo], [novo, { ...POST, likes: 5 }]).map((p) => [p._id, p.likes])).toEqual([["p9", 1], ["p1", 5], ["p0", 1]]);
+  });
+
+  it("avisa quando não consegue conectar e reconecta se o servidor encerrar", () => {
+    routes["GET /posts"] = [200, []];
+    renderAt("/");
+    const socket = globalThis.__sockets.at(-1);
+    act(() => socket.fire("connect_error", new Error("xhr poll error")));
+    expect(screen.getByText("Tempo real desconectado. Tentando reconectar…")).toBeTruthy();
+    act(() => socket.fire("disconnect", "io server disconnect"));
+    expect(socket.connect).toHaveBeenCalled();
   });
 });
+/* Fim de app.test.jsx */

@@ -21,6 +21,11 @@ export function appendPage(feed, page) {
   return [...feed, ...page.filter((p) => !ids.has(p._id))];
 }
 
+/* Junta a primeira página ao feed sem perder as páginas já carregadas: posts novos no topo, os conhecidos atualizados no lugar */
+export function mergeFirstPage(feed, page) {
+  return [...page].reverse().reduce((f, p) => upsert(f, p), feed);
+}
+
 /* Lista de posts com estados de carregamento, vazio e erro */
 export default function Feed() {
   const [feed, setFeed] = useState([]);
@@ -28,39 +33,46 @@ export default function Feed() {
   const [curtidos, setCurtidos] = useState(() => new Set());
   const [tentativa, setTentativa] = useState(0);
   const [mais, setMais] = useState({ temMais: false, carregando: false });
-  const [desconectado, setDesconectado] = useState(false);
+  const [conexao, setConexao] = useState("conectando");
 
   useEffect(() => {
     let alive = true;
     let caiu = false;
-    /* Busca a primeira página; ao reconectar, roda de novo sem apagar o feed da tela */
-    const carregar = () => {
-      setState((s) => ({ ...s, loading: true, error: "" }));
-      return api(`/posts?limit=${PAGE_SIZE}`)
-        .then((posts) => {
-          if (!alive) return;
-          setFeed(posts);
-          setMais({ temMais: posts.length === PAGE_SIZE, carregando: false });
-          setState({ loading: false, error: "" });
-        })
-        .catch((err) => alive && setState({ loading: false, error: err.message }));
-    };
-    carregar();
+    /* Primeira carga: a primeira página vira o feed */
+    setState({ loading: true, error: "" });
+    api(`/posts?limit=${PAGE_SIZE}`)
+      .then((posts) => {
+        if (!alive) return;
+        setFeed(posts);
+        setMais({ temMais: posts.length === PAGE_SIZE, carregando: false });
+        setState({ loading: false, error: "" });
+      })
+      .catch((err) => alive && setState({ loading: false, error: err.message }));
+    /* Depois de reconectar: busca a primeira página e junta ao que já está na tela */
+    const atualizar = () => api(`/posts?limit=${PAGE_SIZE}`)
+      .then((posts) => alive && setFeed((f) => mergeFirstPage(f, posts)))
+      .catch((err) => alive && setState((s) => ({ ...s, error: `O feed pode estar desatualizado. ${err.message}` })));
     const socket = io(API_URL);
     socket.on("post", (p) => setFeed((f) => upsert(f, p)));
     socket.on("like", (p) => setFeed((f) => (f.some((x) => x._id === p._id) ? upsert(f, p) : f)));
-    /* Tempo real: avisa quando cai e, ao voltar, busca o que chegou enquanto estava fora */
-    socket.on("disconnect", () => {
+    /* Tempo real: avisa quando cai (ou não consegue conectar) e, ao voltar, busca o que chegou enquanto estava fora */
+    const caiuAgora = () => {
       if (!alive) return;
       caiu = true;
-      setDesconectado(true);
+      setConexao("desconectado");
+    };
+    socket.on("connect_error", caiuAgora);
+    socket.on("disconnect", (motivo) => {
+      caiuAgora();
+      /* Quando o servidor encerra a conexão, o cliente não tenta de novo sozinho */
+      if (alive && motivo === "io server disconnect") socket.connect();
     });
     socket.on("connect", () => {
       if (!alive) return;
-      setDesconectado(false);
+      setConexao("conectado");
       if (caiu) {
         caiu = false;
-        carregar();
+        atualizar();
       }
     });
     return () => { alive = false; socket.disconnect(); };
@@ -94,7 +106,7 @@ export default function Feed() {
   }
 
   return (
-    <section id="post-list" aria-labelledby="feed-title">
+    <section id="post-list" aria-labelledby="feed-title" data-tempo-real={conexao}>
       <h1 id="feed-title" className="sr-only">Feed de fotos</h1>
       {state.error && (
         <div className="notice error" role="alert">
@@ -104,7 +116,7 @@ export default function Feed() {
           )}
         </div>
       )}
-      {desconectado && (
+      {conexao === "desconectado" && (
         <p className="notice" role="status">Tempo real desconectado. Tentando reconectar…</p>
       )}
       {state.loading && feed.length === 0 && (

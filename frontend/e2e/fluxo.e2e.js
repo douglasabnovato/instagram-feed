@@ -1,8 +1,9 @@
 /* Fluxo principal na tela: publicar uma foto, vê-la no feed e ver a curtida chegar em outra página sem recarregar */
+import { fileURLToPath } from "node:url";
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-const FOTO = new URL("./fixtures/foto.png", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
+const FOTO = fileURLToPath(new URL("./fixtures/foto.png", import.meta.url));
 const autor = `Teste ${Date.now().toString(36)}`;
 
 /* axe sem violações nas regras WCAG A e AA */
@@ -34,6 +35,8 @@ test("publica uma foto, vê no feed e a curtida chega na outra página", async (
 
   const outra = await context.newPage();
   await outra.goto("/");
+  await expect(outra.locator('#post-list[data-tempo-real="conectado"]')).toBeAttached();
+  await expect(page.locator('#post-list[data-tempo-real="conectado"]')).toBeAttached();
   const postNaOutra = outra.locator("article.post").filter({ has: outra.getByAltText(`Foto de ${autor}: Teste do fluxo`) });
   await expect(postNaOutra).toContainText("0 curtidas");
 
@@ -47,6 +50,6 @@ test("o primeiro Tab no feed mostra o foco", async ({ page }) => {
   await page.keyboard.press("Tab");
   const focado = page.locator(":focus");
   await expect(focado).toBeVisible();
-  const outline = await focado.evaluate((el) => getComputedStyle(el).outlineStyle);
-  expect(outline).not.toBe("none");
+  const contorno = await focado.evaluate((el) => { const c = getComputedStyle(el); return `${c.outlineWidth} ${c.outlineStyle}`; });
+  expect(contorno).toBe("3px solid");
 });
