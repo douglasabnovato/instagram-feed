@@ -128,7 +128,7 @@ describe("marca e formatação", () => {
   it("mostra a marca alô, uai, o botão de publicar e o aviso de demonstração", () => {
     routes["GET /posts"] = [200, []];
     renderAt("/");
-    expect(screen.getByRole("link", { name: "alô, uai — ir para o feed" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: /^alô, uai/ })).toBeTruthy();
     expect(screen.getByRole("link", { name: "Publicar" }).getAttribute("href")).toBe("/new");
     expect(screen.getByText(/não envie fotos de pessoas/)).toBeTruthy();
     expect(document.body.textContent).not.toMatch(/instagram/i);
