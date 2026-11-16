@@ -12,14 +12,14 @@
   <img alt="Feed do alô, uai na web" src="./docs/imagens/feed-web.jpg" width="700px">
 </p>
 
-## Estado e próximos passos (ciclo de 16/11/2026)
+## Estado e próximos passos (ciclo de 15/11/2026)
 
 Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende de republicar no Render ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)). Para ver o projeto, rode localmente (seção "Como executar o projeto").
 
 **O que foi feito**
-- 16/11/2026: teste no navegador (Playwright) do fluxo publicar → ver no feed → curtir, com a curtida chegando numa segunda página e axe nas duas telas, num job `e2e` do CI ([#90](https://github.com/douglasabnovato/instagram-feed/issues/90)).
-- 16/11/2026: aviso "Tempo real desconectado" e nova busca do feed ao reconectar ([#89](https://github.com/douglasabnovato/instagram-feed/issues/89)).
-- 16/11/2026: imagens e ícones da identidade antiga apagados ([#91](https://github.com/douglasabnovato/instagram-feed/issues/91)).
+- 15/11/2026: teste no navegador (Playwright) do fluxo publicar → ver no feed → curtir, com a curtida chegando numa segunda página e axe nas duas telas, num job `e2e` do CI ([#90](https://github.com/douglasabnovato/instagram-feed/issues/90)).
+- 15/11/2026: aviso "Tempo real desconectado" e nova busca do feed ao reconectar ([#89](https://github.com/douglasabnovato/instagram-feed/issues/89)).
+- 15/11/2026: imagens e ícones da identidade antiga apagados ([#91](https://github.com/douglasabnovato/instagram-feed/issues/91)).
 - 10/11/2026: a `master` está protegida pelo ruleset `principal-protegida` ([#86](https://github.com/douglasabnovato/instagram-feed/issues/86)).
 - Servidor antigo, que tinha a senha do banco, apagado do código; "Tentar novamente", curtida que desfaz e "Carregar mais fotos" ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)).
 
@@ -30,7 +30,7 @@ Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende
 
 **Onde está a documentação**
 - Estado e critérios: [docs/MVP.md](docs/MVP.md).
-- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md), seção "Ciclo de 16/11/2026".
+- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md), seção "Ciclo de 15/11/2026".
 
 ## 🧠 O que aprendi
 
@@ -281,7 +281,7 @@ App móvel: React Native CLI 0.61, sem Expo. O CI instala com `legacy-peer-deps`
 - [x] Curtida que falha desfaz o coração e avisa
 - [x] CI também nos PRs para `developer/**`
 
-### Ciclo de 16/11/2026
+### Ciclo de 15/11/2026
 
 - [x] Teste no navegador do fluxo publicar → feed → curtida em tempo real, com axe, no CI
 - [x] Aviso de tempo real desconectado e reconexão
