@@ -17,6 +17,7 @@
 No ar em <https://alo-uai-web.onrender.com> (API: <https://alo-uai-api.onrender.com/health>), no plano gratuito do Render, com banco novo no MongoDB Atlas. Conferido em 15/11/2026: site, `/health` e `/posts` responderam 200, e uma publicação de teste apareceu no feed.
 
 **O que foi feito**
+- 16/11/2026: alertas do Dependabot conferidos (12h01): 34 abertos, todos no `instarocket/package-lock.json`, o app congelado. A [ADR 0001](docs/adr/0001-congelar-instarocket.md) registra a mesma contagem e o risco aceito pelo responsável. Nenhum alerta em `backend/` nem em `frontend/`.
 - 15/11/2026: usuários antigos do Atlas revogados ([#85](https://github.com/douglasabnovato/instagram-feed/issues/85)); app móvel congelado por decisão do responsável ([#88](https://github.com/douglasabnovato/instagram-feed/issues/88), [ADR 0001](docs/adr/0001-congelar-instarocket.md)).
 - 15/11/2026: republicado no Render, com banco novo e usuário só deste app ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)).
 - 15/11/2026: teste no navegador (Playwright) do fluxo publicar → ver no feed → curtir, com a curtida chegando numa segunda página e axe nas duas telas, num job `e2e` do CI ([#90](https://github.com/douglasabnovato/instagram-feed/issues/90)).
@@ -289,9 +290,7 @@ App móvel: React Native CLI 0.61, sem Expo. O CI instala com `legacy-peer-deps`
 
 ### Próximos passos
 
-- Revogar o usuário antigo no MongoDB Atlas (responsável)
-- Republicar no Render (responsável) e conferir o link
-- Decidir o app móvel e os PRs do Dependabot do `instarocket/` (responsável)
+- Migrar o app móvel para o Expo 57 (#105). Revogar o usuário antigo (#85), republicar no Render (#87) e decidir o app móvel (#88) foram feitos em 15/11/2026.
 
 As issues abertas têm os critérios de cada item.
 
