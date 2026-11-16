@@ -4,13 +4,13 @@
 
 **Nível:** Estudo (N1). Os critérios 5 e 7 não se aplicam e saem da conta: 10 critérios.
 
-**Resumo:** 9 de 10 aplicáveis atendidos (1, 2, 3, 4, 6, 8, 10, 11, 12); 1 parcial (9). Estado em 15/11/2026: os critérios 3, 8 e 11 passaram a ter a evidência que a régua pede (teste no navegador, com axe, no CI).
+**Resumo:** 10 de 10 aplicáveis atendidos. Estado em 15/11/2026: os critérios 3, 8 e 11 passaram a ter a evidência que a régua pede (teste no navegador, com axe, no CI).
 
 **Finalizado:** sim
 
 Em 03/11/2026 eram 8 de 10 (9 e 10 parciais). O resumo de antes dizia 9 de 12 e marcava segurança como "Atende", mas `backend/src/index.js` ainda tinha usuário e senha do Atlas.
 
-Pela regra do ciclo, o critério que falta depende do responsável: 9, com #85 (revogar) e #88 (decidir o app móvel), ambas com o rótulo `depende-do-responsavel`.
+Todos os critérios aplicáveis atendem desde 15/11/2026. Os usuários antigos foram revogados (#85), e o app móvel foi congelado com o risco aceito (#88, ADR 0001). O site está no ar no Render.
 
 Até 10/11/2026, os critérios 3 e 8 constavam como "Atende" só com testes no jsdom, sem o teste de navegador que a régua pede. Em 15/11/2026 essa evidência passou a existir.
 
@@ -26,7 +26,7 @@ Até 10/11/2026, os critérios 3 e 8 constavam como "Atende" só com testes no j
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: feed vazio, sem conexão, erro do servidor com "Tentar novamente", curtida recusada (desfaz e avisa), upload inválido e tempo real desconectado ou sem conseguir conectar (aviso; ao reconectar, a primeira página se junta ao feed sem perder as páginas já carregadas) têm resposta e teste | `cd frontend && npm test`: 14 passed; `cd backend && npm test`: 5 passed | 15/11/2026 |
 | 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1) | — | 03/11/2026 |
 | 8 | Acessibilidade básica | axe e teclado | Atende: axe (WCAG A e AA) sem violações no feed com uma foto real e na publicação, dentro do teste de navegador; o primeiro Tab mostra o contorno de foco de 3px. O axe achou o nome do link da marca sem o texto visível (WCAG 2.5.3), corrigido. O app não tem tema escuro | `npm run test:e2e` (funções `semViolacoes` e teste de teclado em `frontend/e2e/fluxo.e2e.js`) | 15/11/2026 |
-| 9 | Segurança e conformidade | Riscos decididos | Parcial: API e web sem alertas de produção; nenhuma URI com senha no código. A senha antiga segue no histórico do Git até o responsável revogar o usuário no Atlas (#85). O app `instarocket/` tem 34 alertas abertos do Dependabot (7 críticos, 16 altos, 10 médios, 1 baixo) e espera a decisão de congelar ou migrar (#88) | `npm audit --omit=dev`: 0 em `backend/` (mongoose 8.24.9) e em `frontend/`; `gh api repos/douglasabnovato/instagram-feed/dependabot/alerts` | 15/11/2026 |
+| 9 | Segurança e conformidade | Riscos decididos | Atende: API e web sem alertas de produção; nenhuma URI com senha no código. Os usuários antigos do Atlas (com a senha no histórico) foram apagados pelo responsável em 15/11/2026 (#85). O app `instarocket/` tem 34 alertas conhecidos e foi congelado por decisão do responsável, com o risco aceito na [ADR 0001](adr/0001-congelar-instarocket.md) (#88): nada dele vai para produção | `npm audit --omit=dev`: 0 em `backend/` e `frontend/`; #85 fechada em 15/11/2026; ADR 0001 | 15/11/2026 |
 | 10 | Entrega confiável | CI verde antes de entrar na principal | Atende: ruleset `principal-protegida` ativo na `master` (exige PR, bloqueia force push e exclusão); o workflow `CI` roda nos PRs para `master` e `developer/**` | `gh api repos/douglasabnovato/instagram-feed/rulesets`; #86 | 10/11/2026 |
 | 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 5 testes da API, 14 do web, 2 de navegador (job `e2e`) e o teste do app no CI, sem testes pulados | CI do PR do ciclo de 15/11/2026 | 15/11/2026 |
 | 12 | Documentação honesta | O README ensina a rodar, e os números estão certos | Atende: README com `npm run demo` e `npm run test:e2e` conferidos contra os `package.json`; traz o link publicado, conferido em 15/11/2026 | `Readme.md`, este arquivo | 15/11/2026 |
@@ -46,10 +46,10 @@ Contas, comentários, seguidores e armazenamento permanente de imagens.
 | 1 | Apagar o servidor antigo com a senha | Feito (#92) |
 | 2 | "Tentar novamente", curtida que desfaz, "Carregar mais fotos" | Feito (#92) |
 | 3 | CI nos PRs para a `developer` | Feito neste ciclo |
-| 4 | Revogar o usuário antigo no Atlas | Com o responsável (#85) |
+| 4 | Revogar o usuário antigo no Atlas | Feito em 15/11/2026 (#85) |
 | 5 | Proteger a `master` | Feito (#86) |
 | 6 | Republicar no Render | Feito em 15/11/2026 (#87) |
-| 7 | App móvel e Dependabot | Decisão do responsável (#88) |
+| 7 | App móvel e Dependabot | Congelado em 15/11/2026 (#88, ADR 0001); migração em #105 |
 | 8 | Aviso de tempo real desconectado | Feito (#89) |
 | 9 | Teste de navegador do fluxo, com axe | Feito (#90) |
 | 10 | Apagar a identidade antiga sem uso | Feito (#91) |
