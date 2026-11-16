@@ -77,14 +77,7 @@ Recomendação para o lote (my-money-app, aircnc e alô, uai): **um único clust
 3. **Database → Connect → Drivers**: copiar a URI e acrescentar `/alo_uai` antes do `?`.
 4. `cd /c/ambiente-projeto/ser-mvp/instagram-feed`
 5. Arquivos substituídos no ciclo MVP: já removidos (o último lote saiu em 03/11/2026, com o `backend/src/index.js`, que tinha a senha antiga).
-6. Remover a identidade antiga (logo, favicon, ícones, imagens sem uso, screenshots e o logo do app):
-   ```bash
-   git rm frontend/public/logo.svg frontend/public/favicon.ico frontend/public/your-logo-32-ico.png
-   git rm frontend/src/assets/camera.svg frontend/src/assets/collect.svg frontend/src/assets/comment.svg frontend/src/assets/like.svg frontend/src/assets/more.svg frontend/src/assets/send.svg
-   git rm frontend/src/assets/img-movile-startup.jpeg frontend/src/assets/img-rocketseat.png frontend/src/assets/img-semana-omnistack-7.jpg backend/src/assets/rocketseat-image.png
-   git rm .github/tela-aplicacao-1.jpg .github/tela-aplicacao-2.jpg .github/tela-aplicacao-3.jpg .github/preview.gif
-   git rm instarocket/src/assets/instagram.png instarocket/src/assets/instagram@2x.png instarocket/src/assets/instagram@3x.png
-   ```
+6. Remover a identidade antiga: feito em 16/11/2026 (#91), menos os ícones do app móvel em `instarocket/src/assets/`, que esperam a decisão sobre o app (#88).
 7. Tirar do Git as imagens antigas enviadas por usuários (o banco novo começa vazio):
    `git rm -r --cached backend/uploads && echo "uploads/" >> backend/.gitignore`
 8. Opcional (app mobile, congelado): o nome que aparece embaixo do ícone no Android fica em `instarocket/android/app/src/main/res/values/strings.xml` (`app_name`). Troque para `alô, uai` se for gerar o APK.
