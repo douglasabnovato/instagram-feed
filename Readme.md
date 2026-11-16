@@ -1,4 +1,4 @@
-> **Projeto de estudo.** Estado conferido em 31/10/2026: os endereços que seguem fora do ar foram retirados deste README. Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
+> **Projeto de estudo.** Estado conferido em 15/11/2026: site e API no ar no Render (seção "Estado e próximos passos"). Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
 
 <p align="center">
   <img alt="alô, uai" src="./frontend/src/assets/logo.svg" width="72px">
@@ -12,25 +12,25 @@
   <img alt="Feed do alô, uai na web" src="./docs/imagens/feed-web.jpg" width="700px">
 </p>
 
-## Estado e próximos passos (ciclo de 16/11/2026)
+## Estado e próximos passos (ciclo de 15/11/2026)
 
-Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende de republicar no Render ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)). Para ver o projeto, rode localmente (seção "Como executar o projeto").
+No ar em <https://alo-uai-web.onrender.com> (API: <https://alo-uai-api.onrender.com/health>), no plano gratuito do Render, com banco novo no MongoDB Atlas. Conferido em 15/11/2026: site, `/health` e `/posts` responderam 200, e uma publicação de teste apareceu no feed.
 
 **O que foi feito**
-- 16/11/2026: teste no navegador (Playwright) do fluxo publicar → ver no feed → curtir, com a curtida chegando numa segunda página e axe nas duas telas, num job `e2e` do CI ([#90](https://github.com/douglasabnovato/instagram-feed/issues/90)).
-- 16/11/2026: aviso "Tempo real desconectado" e nova busca do feed ao reconectar ([#89](https://github.com/douglasabnovato/instagram-feed/issues/89)).
-- 16/11/2026: imagens e ícones da identidade antiga apagados ([#91](https://github.com/douglasabnovato/instagram-feed/issues/91)).
+- 15/11/2026: republicado no Render, com banco novo e usuário só deste app ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)).
+- 15/11/2026: teste no navegador (Playwright) do fluxo publicar → ver no feed → curtir, com a curtida chegando numa segunda página e axe nas duas telas, num job `e2e` do CI ([#90](https://github.com/douglasabnovato/instagram-feed/issues/90)).
+- 15/11/2026: aviso "Tempo real desconectado" e nova busca do feed ao reconectar ([#89](https://github.com/douglasabnovato/instagram-feed/issues/89)).
+- 15/11/2026: imagens e ícones da identidade antiga apagados ([#91](https://github.com/douglasabnovato/instagram-feed/issues/91)).
 - 10/11/2026: a `master` está protegida pelo ruleset `principal-protegida` ([#86](https://github.com/douglasabnovato/instagram-feed/issues/86)).
 - Servidor antigo, que tinha a senha do banco, apagado do código; "Tentar novamente", curtida que desfaz e "Carregar mais fotos" ([#93](https://github.com/douglasabnovato/instagram-feed/pull/93)).
 
 **O que queremos fazer**
 - [#85](https://github.com/douglasabnovato/instagram-feed/issues/85) Revogar no Atlas o usuário antigo do MongoDB (responsável).
-- [#87](https://github.com/douglasabnovato/instagram-feed/issues/87) Republicar o alô, uai no Render, com banco novo (responsável).
 - [#88](https://github.com/douglasabnovato/instagram-feed/issues/88) Decidir o app móvel e os PRs do Dependabot do instarocket (responsável).
 
 **Onde está a documentação**
 - Estado e critérios: [docs/MVP.md](docs/MVP.md).
-- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md), seção "Ciclo de 16/11/2026".
+- Plano do ciclo: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md), seção "Ciclo de 15/11/2026".
 
 ## 🧠 O que aprendi
 
@@ -43,7 +43,7 @@ Sem site publicado: a demonstração está fora do ar desde 31/10/2026 e depende
 
 ## 🌐 Publicação
 
-- Fora do ar desde a conferência de 31/10/2026; para ver o projeto, rode localmente (seção "Como executar o projeto").
+- Site: <https://alo-uai-web.onrender.com>. API: <https://alo-uai-api.onrender.com/health>. Publicados pelo `render.yaml` (Blueprint) em 15/11/2026, com usuário de banco só deste app (`readWrite` no banco `alo_uai`).
 - Passo a passo do deploy: [docs/DEPLOY.md](docs/DEPLOY.md). O app React Native (`instarocket/`, nome técnico da pasta) não é publicado.
 - Limites do plano gratuito: a API dorme após 15 min sem acesso (cerca de 1 min para acordar) e as imagens enviadas ficam em disco temporário.
 - Demonstração pública: não envie fotos de pessoas nem dados pessoais.
@@ -281,7 +281,7 @@ App móvel: React Native CLI 0.61, sem Expo. O CI instala com `legacy-peer-deps`
 - [x] Curtida que falha desfaz o coração e avisa
 - [x] CI também nos PRs para `developer/**`
 
-### Ciclo de 16/11/2026
+### Ciclo de 15/11/2026
 
 - [x] Teste no navegador do fluxo publicar → feed → curtida em tempo real, com axe, no CI
 - [x] Aviso de tempo real desconectado e reconexão
