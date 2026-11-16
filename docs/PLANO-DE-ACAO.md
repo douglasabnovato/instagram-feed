@@ -79,9 +79,9 @@ Timebox: 45 min.
 
 **Vira issue.** #85, #86, #87 (responsável); #88, #89, #90, #91 (agente).
 
-## Ciclo de 16/11/2026
+## Ciclo de 15/11/2026
 
-> Branch `feature/2026-11-16` → `developer/sprint-2026-11-12` → `master`. A sprint de 12/11 ainda não foi para a `master` (PR #98), então o trabalho entra nela. Nível: Estudo (N1).
+> Branch `feature/2026-11-16` (o nome usa a data em UTC; o trabalho é de 15/11/2026, no horário de Brasília) → `developer/sprint-2026-11-12` → `master`. A sprint de 12/11 ainda não foi para a `master` (PR #98), então o trabalho entra nela. Nível: Estudo (N1).
 
 ### Produto
 
