@@ -253,9 +253,12 @@ cd backend && npm run demo
 cd frontend && npx playwright install chromium
 npm run test:e2e
 
-# Com as portas 3333 ou 5173 ocupadas: escolha outras para a API e o web do teste
+# Com as portas 3333 ou 5173 ocupadas: escolha outras para a API e o web do teste (bash ou Git Bash)
 E2E_API_PORT=4140 E2E_WEB_PORT=4141 npm run test:e2e
+# No PowerShell: $env:E2E_API_PORT=4140; $env:E2E_WEB_PORT=4141; npm run test:e2e
 ```
+
+Fora do CI, o teste reaproveita um servidor que já responda nessas portas. Se a API normal (`npm run dev`) estiver ligada na 3333, desligue-a ou use `E2E_API_PORT`, para o teste usar a API de demonstração em memória.
 
 App: **congelado** desde 15/11/2026 ([ADR 0001](docs/adr/0001-congelar-instarocket.md)). Ele não recebe atualização e tem alertas de segurança conhecidos. A migração está na issue #105. Para rodar mesmo assim, ajuste o endereço em `instarocket/src/config.js` e rode `npx react-native run-android` (não validado).
 
