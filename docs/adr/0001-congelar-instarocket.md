@@ -20,6 +20,10 @@ Congelar o app como histórico do curso:
 - Novos PRs do Dependabot no `instarocket/` são fechados com referência a esta ADR.
 - O critério 9 do `docs/MVP.md` passa a "Atende": o risco está decidido e registrado.
 
+## Nota de 18/11/2026
+
+`gh api "repos/douglasabnovato/instagram-feed/dependabot/alerts?state=open&per_page=100"` devolveu 33 alertas abertos, todos no `instarocket/package-lock.json` (7 críticos, 15 altos, 10 médios e 1 baixo). Um alerta alto caiu com o #102 (flatted e eslint), mesclado pelo responsável em 17/11/2026. A decisão não muda (#113).
+
 ## Como desfazer
 
 Fazer a migração da #105 e marcar esta ADR como substituída.
