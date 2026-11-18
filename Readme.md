@@ -17,6 +17,7 @@
 No ar em <https://alo-uai-web.onrender.com> (API: <https://alo-uai-api.onrender.com/health>), no plano gratuito do Render, com banco novo no MongoDB Atlas. Conferido em 15/11/2026: site, `/health` e `/posts` responderam 200, e uma publicação de teste apareceu no feed.
 
 **O que foi feito**
+- 18/11/2026: alertas do Dependabot conferidos (19h54): 33 abertos, todos no `instarocket/package-lock.json`, cobertos pela [ADR 0001](docs/adr/0001-congelar-instarocket.md) ([#113](https://github.com/douglasabnovato/instagram-feed/issues/113)). O teste de navegador aceita outras portas ([#112](https://github.com/douglasabnovato/instagram-feed/issues/112)).
 - 16/11/2026: alertas do Dependabot conferidos (12h01): 34 abertos, todos no `instarocket/package-lock.json`, o app congelado. A [ADR 0001](docs/adr/0001-congelar-instarocket.md) registra a mesma contagem e o risco aceito pelo responsável. Nenhum alerta em `backend/` nem em `frontend/`.
 - 15/11/2026: usuários antigos do Atlas revogados ([#85](https://github.com/douglasabnovato/instagram-feed/issues/85)); app móvel congelado por decisão do responsável ([#88](https://github.com/douglasabnovato/instagram-feed/issues/88), [ADR 0001](docs/adr/0001-congelar-instarocket.md)).
 - 15/11/2026: republicado no Render, com banco novo e usuário só deste app ([#87](https://github.com/douglasabnovato/instagram-feed/issues/87)).
@@ -251,6 +252,9 @@ cd backend && npm run demo
 # Teste no navegador, num terminal novo na raiz do repositório (sobe a API de demonstração e o web sozinho)
 cd frontend && npx playwright install chromium
 npm run test:e2e
+
+# Com as portas 3333 ou 5173 ocupadas: escolha outras para a API e o web do teste
+E2E_API_PORT=4140 E2E_WEB_PORT=4141 npm run test:e2e
 ```
 
 App: **congelado** desde 15/11/2026 ([ADR 0001](docs/adr/0001-congelar-instarocket.md)). Ele não recebe atualização e tem alertas de segurança conhecidos. A migração está na issue #105. Para rodar mesmo assim, ajuste o endereço em `instarocket/src/config.js` e rode `npx react-native run-android` (não validado).
