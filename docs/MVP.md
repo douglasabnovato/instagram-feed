@@ -1,6 +1,6 @@
 # MVP — instagram-feed (alô, uai)
 
-> Criado em 02/11/2026. Revisto em 03/11/2026, 15/11/2026 e 16/11/2026, nos ciclos do processo por repositório. Este arquivo é a fonte única do estado. Testado no Windows, com Node 24. Não houve teste com pessoas nem em aparelho real.
+> Criado em 02/11/2026. Revisto em 03/11/2026, 15/11/2026, 16/11/2026 e 18/11/2026, nos ciclos do processo por repositório. Este arquivo é a fonte única do estado. Testado no Windows, com Node 24. Não houve teste com pessoas nem em aparelho real.
 
 **Nível:** Estudo (N1). Os critérios 5 e 7 não se aplicam e saem da conta: 10 critérios.
 
@@ -11,6 +11,8 @@
 Em 03/11/2026 eram 8 de 10 (9 e 10 parciais). O resumo de antes dizia 9 de 12 e marcava segurança como "Atende", mas `backend/src/index.js` ainda tinha usuário e senha do Atlas.
 
 Em 16/11/2026 (12h01), com os alertas do Dependabot ligados pelo responsável, a leitura deu 34 alertas abertos, todos no `instarocket/package-lock.json` e cobertos pela ADR 0001; o critério 9 segue em "Atende".
+
+Em 18/11/2026 (19h54), a mesma leitura deu 33 alertas abertos, todos no `instarocket/package-lock.json` (7 críticos, 15 altos, 10 médios e 1 baixo), depois do #102 mesclado pelo responsável em 17/11/2026 (#113). O teste de navegador passou a aceitar outras portas por `E2E_API_PORT` e `E2E_WEB_PORT` (#112).
 
 Todos os critérios aplicáveis atendem desde 15/11/2026. Os usuários antigos foram revogados (#85), e o app móvel foi congelado com o risco aceito (#88, ADR 0001). O site está no ar no Render.
 
@@ -28,7 +30,7 @@ Até 10/11/2026, os critérios 3 e 8 constavam como "Atende" só com testes no j
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: feed vazio, sem conexão, erro do servidor com "Tentar novamente", curtida recusada (desfaz e avisa), upload inválido e tempo real desconectado ou sem conseguir conectar (aviso; ao reconectar, a primeira página se junta ao feed sem perder as páginas já carregadas) têm resposta e teste | `cd frontend && npm test`: 14 passed; `cd backend && npm test`: 5 passed | 15/11/2026 |
 | 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1) | — | 03/11/2026 |
 | 8 | Acessibilidade básica | axe e teclado | Atende: axe (WCAG A e AA) sem violações no feed com uma foto real e na publicação, dentro do teste de navegador; o primeiro Tab mostra o contorno de foco de 3px. O axe achou o nome do link da marca sem o texto visível (WCAG 2.5.3), corrigido. O app não tem tema escuro | `npm run test:e2e` (funções `semViolacoes` e teste de teclado em `frontend/e2e/fluxo.e2e.js`) | 15/11/2026 |
-| 9 | Segurança e conformidade | Riscos decididos | Atende: API e web sem alertas de produção; nenhuma URI com senha no código. Os usuários antigos do Atlas (com a senha no histórico) foram apagados pelo responsável em 15/11/2026 (#85). Os 34 alertas abertos do Dependabot estão todos no `instarocket/package-lock.json` (7 críticos, 16 altos, 10 médios e 1 baixo), a mesma contagem registrada na [ADR 0001](adr/0001-congelar-instarocket.md) (#88): o app foi congelado por decisão do responsável e o risco foi aceito, porque nada dele vai para produção. Nenhum alerta em `backend/` nem em `frontend/` | `npm audit --omit=dev`: 0 em `backend/` e `frontend/`; `gh api "repos/douglasabnovato/instagram-feed/dependabot/alerts?state=open"` em 16/11/2026: 34, todos no `instarocket/package-lock.json`; #85 fechada em 15/11/2026; ADR 0001 | 16/11/2026 |
+| 9 | Segurança e conformidade | Riscos decididos | Atende: API e web sem alertas de produção; nenhuma URI com senha no código. Os usuários antigos do Atlas (com a senha no histórico) foram apagados pelo responsável em 15/11/2026 (#85). Os 33 alertas abertos do Dependabot em 18/11/2026 estão todos no `instarocket/package-lock.json` (7 críticos, 15 altos, 10 médios e 1 baixo), cobertos pela [ADR 0001](adr/0001-congelar-instarocket.md) (#88); eram 34 até o responsável mesclar o #102 em 17/11/2026. O app foi congelado por decisão do responsável e o risco foi aceito, porque nada dele vai para produção. Nenhum alerta em `backend/` nem em `frontend/` | `npm audit --omit=dev` em 18/11/2026: 0 em `backend/` e `frontend/`; `gh api "repos/douglasabnovato/instagram-feed/dependabot/alerts?state=open&per_page=100"` em 18/11/2026: 33, todos no `instarocket/package-lock.json`; #85 fechada em 15/11/2026; ADR 0001 (#113) | 18/11/2026 |
 | 10 | Entrega confiável | CI verde antes de entrar na principal | Atende: ruleset `principal-protegida` ativo na `master` (exige PR, bloqueia force push e exclusão); o workflow `CI` roda nos PRs para `master` e `developer/**` | `gh api repos/douglasabnovato/instagram-feed/rulesets`; #86 | 10/11/2026 |
 | 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 5 testes da API, 14 do web, 2 de navegador (job `e2e`) e o teste do app no CI, sem testes pulados | CI do PR do ciclo de 15/11/2026 | 15/11/2026 |
 | 12 | Documentação honesta | O README ensina a rodar, e os números estão certos | Atende: README com `npm run demo` e `npm run test:e2e` conferidos contra os `package.json`; traz o link publicado, conferido em 15/11/2026 | `Readme.md`, este arquivo | 15/11/2026 |
